@@ -1,0 +1,401 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Title from "../components/Title.astro";
+---
+
+<Layout title="Renta de Drones">
+  <div class="bg-black text-white w-full">
+    <div class="flex justify-center pt-6">
+      <Navbar />
+    </div>
+
+    <!-- Hero -->
+    <section
+      class="min-h-dvh w-full flex items-center justify-center px-4 py-16"
+    >
+      <div class="w-11/12 max-w-5xl text-center flex flex-col items-center">
+        <Title
+          tag="h1"
+          unstyled={true}
+          class="text-4xl md:text-5xl font-bold text-white mb-3"
+        >
+          Renta de drones y fotografía aérea profesional
+        </Title>
+        <div
+          class="mx-auto w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <p class="mt-6 text-white/80 max-w-2xl mx-auto">
+          Perspectivas únicas desde el cielo con equipamiento certificado y
+          operadores especializados para tus proyectos.
+        </p>
+      </div>
+    </section>
+
+    <!-- Servicios de drones -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Fotografía aérea</Title
+          >
+          <p class="text-white/70">
+            Tomas de alta calidad desde perspectiva aérea para proyectos
+            comerciales.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Videografía con drones</Title
+          >
+          <p class="text-white/70">
+            Video 4K profesional con estabilización de cine para máximo impacto.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2">Avance de obra</Title
+          >
+          <p class="text-white/70">
+            Documentación visual precisa y modelos 3D de proyectos
+            constructivos.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Cobertura de eventos</Title
+          >
+          <p class="text-white/70">
+            Tomas aéreas de celebraciones, conferencias y eventos especiales.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Inspección con drones</Title
+          >
+          <p class="text-white/70">
+            Análisis visual de infraestructura en áreas difíciles de acceso.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Comerciales publicitarios</Title
+          >
+          <p class="text-white/70">
+            Videos profesionales con tomas aéreas espectaculares para marketing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Características principales -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >Por qué somos tu mejor opción</Title
+        >
+        <div
+          class="w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Equipamiento profesional</Title
+            >
+            <p class="text-white/70">
+              Drones de última generación con cámaras 4K y sensores
+              especializados.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Operadores certificados</Title
+            >
+            <p class="text-white/70">
+              Equipo capacitado y autorizado para operar drones en cualquier
+              terreno.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Servicio rápido</Title
+            >
+            <p class="text-white/70">
+              Respuesta inmediata para proyectos urgentes y disponibilidad 24/7.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Cobertura nacional</Title
+            >
+            <p class="text-white/70">
+              Operamos en todo México para alcanzar tus proyectos en cualquier
+              ubicación.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Flexibilidad</Title
+            >
+            <p class="text-white/70">
+              Adaptamos nuestros servicios a tus necesidades específicas y
+              presupuesto.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Postproducción incluida</Title
+            >
+            <p class="text-white/70">
+              Edición, color grading y entrega en múltiples formatos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aplicaciones y casos de uso -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >Aplicaciones de nuestros servicios</Title
+        >
+        <div
+          class="w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Sector inmobiliario</Title
+            >
+            <p class="text-white/70">
+              Presentación de propiedades con vistas espectaculares desde el
+              aire.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Construcción y obras</Title
+            >
+            <p class="text-white/70">
+              Monitoreo de avance de proyecto con documentación visual precisa.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Agricultura y terrenos</Title
+            >
+            <p class="text-white/70">
+              Análisis de terrenos y cultivos con perspectiva aérea detallada.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Turismo y hospitalidad</Title
+            >
+            <p class="text-white/70">
+              Promoción de destinos y hoteles con imágenes impactantes desde el
+              cielo.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Eventos especiales</Title
+            >
+            <p class="text-white/70">
+              Cobertura aérea de bodas, festivales, conciertos y convenciones.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Publicidad y marketing</Title
+            >
+            <p class="text-white/70">
+              Contenido viral para redes sociales y campañas publicitarias
+              impactantes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuestro proceso -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >Nuestro proceso</Title
+        >
+        <div
+          class="w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">1</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Consulta</Title
+            >
+            <p class="text-white/70">
+              Entendemos tus necesidades y alcance del proyecto.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">2</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Planeación</Title
+            >
+            <p class="text-white/70">
+              Definimos ruta de vuelo, equipo y condiciones operacionales.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">3</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Ejecución</Title
+            >
+            <p class="text-white/70">
+              Captura profesional de tomas aéreas según especificaciones.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">4</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Entrega</Title
+            >
+            <p class="text-white/70">
+              Material editado y optimizado en formatos solicitados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-4xl text-center flex flex-col items-center">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >Contáctanos</Title
+        >
+        <div
+          class="mx-auto w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <p class="mt-6 text-white/80 max-w-2xl mx-auto">
+          Nuestro equipo está listo para llevar tu proyecto a nuevas alturas.
+        </p>
+        <div
+          class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 text-white/80"
+        >
+          <a href="tel:+528131247103" class="hover:text-white transition-colors"
+            >Teléfono: +52 (81) 3124 7103</a
+          >
+          <div class="hidden md:block w-px h-6 bg-white/20"></div>
+          <a
+            href="mailto:contacto@pixelero.com.mx"
+            class="hover:text-white transition-colors"
+            >Correo: contacto@pixelero.com.mx</a
+          >
+          <div class="hidden md:block w-px h-6 bg-white/20"></div>
+          <a
+            href="https://maps.app.goo.gl/6kUdwEajxXiRkHff6"
+            class="hover:text-white transition-colors">Monterrey, NL</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</Layout>

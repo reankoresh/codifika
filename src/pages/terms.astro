@@ -1,24 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Title from "../components/Title.astro";
 ---
 
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-  * {
-    font-family: "Poppins", sans-serif;
-  }
-</style>
-
-<Layout>
+<Layout title="Términos y Condiciones">
   <div
     class="min-h-dvh w-full bg-black flex items-center justify-center px-4 py-12"
   >
     <div class="w-11/12 max-w-4xl bg-black rounded-lg">
       <div class="mb-12">
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+        <Title
+          tag="h1"
+          unstyled={true}
+          class="text-4xl md:text-5xl font-bold text-white mb-2"
+        >
           Términos y Condiciones
-        </h1>
+        </Title>
         <div
           class="w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
         >
@@ -27,9 +24,13 @@ import Layout from "../layouts/Layout.astro";
 
       <div class="space-y-8 text-white/80 leading-relaxed">
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">
+          <Title
+            tag="h2"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-3"
+          >
             1. Aceptación de Términos
-          </h2>
+          </Title>
           <p>
             Al acceder y utilizar los servicios de Codifika, incluyendo Diseño
             Web, Video & Fotografía, Redes Sociales, Renta de Drones y Eventos,
@@ -39,9 +40,13 @@ import Layout from "../layouts/Layout.astro";
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">
+          <Title
+            tag="h2"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-3"
+          >
             2. Servicios Ofrecidos
-          </h2>
+          </Title>
           <p>
             Codifika ofrece servicios profesionales en diseño web estratégico,
             producción de video y fotografía, gestión de redes sociales, renta
@@ -51,9 +56,13 @@ import Layout from "../layouts/Layout.astro";
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">
+          <Title
+            tag="h2"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-3"
+          >
             3. Propiedad Intelectual
-          </h2>
+          </Title>
           <p>
             Todo contenido, diseño, y material desarrollado por Codifika
             permanece bajo nuestra protección de derechos de autor, a menos que
@@ -64,9 +73,13 @@ import Layout from "../layouts/Layout.astro";
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">
+          <Title
+            tag="h2"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-3"
+          >
             4. Responsabilidades del Cliente
-          </h2>
+          </Title>
           <p>
             El cliente es responsable de proporcionar información precisa y
             autorización para el uso de materiales, imágenes y datos personales.
@@ -76,9 +89,13 @@ import Layout from "../layouts/Layout.astro";
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">
+          <Title
+            tag="h2"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-3"
+          >
             5. Limitación de Responsabilidad
-          </h2>
+          </Title>
           <p>
             Codifika no se responsabiliza por daños indirectos, incidentales o
             consecuentes derivados del uso de nuestros servicios. Nuestra
@@ -88,9 +105,13 @@ import Layout from "../layouts/Layout.astro";
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">
+          <Title
+            tag="h2"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-3"
+          >
             6. Pagos y Términos Comerciales
-          </h2>
+          </Title>
           <p>
             Los términos de pago se especifican en cada contrato. Los servicios
             no se iniciarán hasta confirmar el pago. Se aplican cargos por
@@ -100,9 +121,13 @@ import Layout from "../layouts/Layout.astro";
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">
+          <Title
+            tag="h2"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-3"
+          >
             7. Confidencialidad
-          </h2>
+          </Title>
           <p>
             Ambas partes se comprometen a mantener confidencial la información
             comercial sensible. Codifika respeta la privacidad de tus datos
@@ -112,9 +137,13 @@ import Layout from "../layouts/Layout.astro";
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">
+          <Title
+            tag="h2"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-3"
+          >
             8. Modificaciones
-          </h2>
+          </Title>
           <p>
             Codifika se reserva el derecho de modificar estos términos en
             cualquier momento. Los cambios serán notificados a través de nuestro
@@ -124,9 +153,13 @@ import Layout from "../layouts/Layout.astro";
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">
+          <Title
+            tag="h2"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-3"
+          >
             9. Ley Aplicable
-          </h2>
+          </Title>
           <p>
             Estos Términos y Condiciones se rigen por las leyes de la República
             Mexicana. Cualquier disputa será resuelta en los tribunales
@@ -135,7 +168,11 @@ import Layout from "../layouts/Layout.astro";
         </section>
 
         <section>
-          <h2 class="text-xl font-semibold text-white mb-3">10. Contacto</h2>
+          <Title
+            tag="h2"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-3">10. Contacto</Title
+          >
           <p>
             Para consultas sobre estos Términos y Condiciones, contáctanos a
             través de nuestros canales oficiales. Estamos disponibles para

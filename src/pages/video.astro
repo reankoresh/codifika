@@ -1,0 +1,373 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Title from "../components/Title.astro";
+---
+
+<Layout title="Video & Fotografía">
+  <div class="bg-black text-white w-full">
+    <div class="flex justify-center pt-6">
+      <Navbar />
+    </div>
+
+    <!-- Hero -->
+    <section
+      class="min-h-dvh w-full flex items-center justify-center px-4 py-16"
+    >
+      <div class="w-11/12 max-w-5xl text-center flex flex-col items-center">
+        <Title
+          tag="h1"
+          unstyled={true}
+          class="text-4xl md:text-5xl font-bold text-white mb-3"
+        >
+          Video y fotografía profesional para tu marca
+        </Title>
+        <div
+          class="mx-auto w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <p class="mt-6 text-white/80 max-w-2xl mx-auto">
+          Producción audiovisual de alto impacto que comunica tu mensaje y
+          conecta con tu audiencia.
+        </p>
+      </div>
+    </section>
+
+    <!-- Servicios de video y fotografía -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Producción de video</Title
+          >
+          <p class="text-white/70">
+            Grabación y dirección de video profesional para tu empresa.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2">Postproducción</Title
+          >
+          <p class="text-white/70">
+            Edición, color grading y efectos especiales de calidad cine.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Animación 2D y 3D</Title
+          >
+          <p class="text-white/70">
+            Animaciones y gráficos dinámicos para explicar tus servicios.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Fotografía comercial</Title
+          >
+          <p class="text-white/70">
+            Sesiones fotográficas profesionales de productos y eventos.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Videografía con drones</Title
+          >
+          <p class="text-white/70">
+            Tomas aéreas y perspectivas únicas para mayor impacto visual.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Voz en off y música</Title
+          >
+          <p class="text-white/70">
+            Locución profesional y selección de audio para tus videos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tipos de video -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >Tipos de video que realizamos</Title
+        >
+        <div
+          class="w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Spots comerciales</Title
+            >
+            <p class="text-white/70">
+              Videos publicitarios con impacto para redes sociales y TV.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Videos corporativos</Title
+            >
+            <p class="text-white/70">
+              Presentación de marca, valores y servicios empresariales.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Testimonios y casos de éxito</Title
+            >
+            <p class="text-white/70">
+              Historias de clientes satisfechos que generan confianza.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Videos explicativos</Title
+            >
+            <p class="text-white/70">
+              Contenido educativo y de valor para tu audiencia.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Cobertura de eventos</Title
+            >
+            <p class="text-white/70">
+              Registro profesional de conferencias, lanzamientos y reuniones.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Comunicación interna</Title
+            >
+            <p class="text-white/70">
+              Videos para motivación y alineación de equipos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >¿Por qué elegirnos?</Title
+        >
+        <div
+          class="w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Equipo multidisciplinario</Title
+            >
+            <p class="text-white/70">
+              Directores, camarógrafos, editores y productores especializados.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Equipamiento profesional</Title
+            >
+            <p class="text-white/70">
+              Cámaras 4K, drones certificados y estudio completo.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Experiencia comprobada</Title
+            >
+            <p class="text-white/70">
+              Portafolio de proyectos de alto impacto en diversas industrias.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Asesoría creativa</Title
+            >
+            <p class="text-white/70">
+              Estrategia audiovisual para maximizar el impacto de tu mensaje.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuestro proceso -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >Nuestro proceso</Title
+        >
+        <div
+          class="w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">1</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Pre-producción</Title
+            >
+            <p class="text-white/70">
+              Concepto, guión y planificación de la producción.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">2</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Producción</Title
+            >
+            <p class="text-white/70">
+              Grabación de calidad con equipamiento profesional.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">3</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Postproducción</Title
+            >
+            <p class="text-white/70">
+              Edición, efectos y color grading de nivel profesional.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">4</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Entrega</Title
+            >
+            <p class="text-white/70">
+              Video final optimizado para todos los formatos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-4xl text-center flex flex-col items-center">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >Contáctanos</Title
+        >
+        <div
+          class="mx-auto w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <p class="mt-6 text-white/80 max-w-2xl mx-auto">
+          Nuestro equipo está listo para llevar tu visión al siguiente nivel.
+        </p>
+        <div
+          class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 text-white/80"
+        >
+          <a href="tel:+528131247103" class="hover:text-white transition-colors"
+            >Teléfono: +52 (81) 3124 7103</a
+          >
+          <div class="hidden md:block w-px h-6 bg-white/20"></div>
+          <a
+            href="mailto:contacto@pixelero.com.mx"
+            class="hover:text-white transition-colors"
+            >Correo: contacto@pixelero.com.mx</a
+          >
+          <div class="hidden md:block w-px h-6 bg-white/20"></div>
+          <a
+            href="https://maps.app.goo.gl/6kUdwEajxXiRkHff6"
+            class="hover:text-white transition-colors">Monterrey, NL</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</Layout>

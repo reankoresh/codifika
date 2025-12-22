@@ -1,0 +1,286 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Title from "../components/Title.astro";
+---
+
+<Layout title="Diseño Gráfico">
+  <div class="bg-black text-white w-full">
+    <div class="flex justify-center pt-6">
+      <Navbar />
+    </div>
+
+    <!-- Hero -->
+    <section
+      class="min-h-dvh w-full flex items-center justify-center px-4 py-16"
+    >
+      <div class="w-11/12 max-w-5xl text-center flex flex-col items-center">
+        <Title
+          tag="h1"
+          unstyled={true}
+          class="text-4xl md:text-5xl font-bold text-white mb-3"
+        >
+          Diseño gráfico que comunica tu marca
+        </Title>
+        <div
+          class="mx-auto w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <p class="mt-6 text-white/80 max-w-2xl mx-auto">
+          Creamos soluciones visuales estratégicas que reflejan la identidad de
+          tu empresa y conectan con tu audiencia.
+        </p>
+      </div>
+    </section>
+
+    <!-- Servicios de diseño -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Identidad corporativa</Title
+          >
+          <p class="text-white/70">
+            Diseño de logo, paleta de colores y guidelines para tu marca.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Material corporativo</Title
+          >
+          <p class="text-white/70">
+            Tarjetas, papelería, hojas membretadas y firma electrónica.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2">Branding</Title
+          >
+          <p class="text-white/70">
+            Estrategia visual completa para posicionar tu marca.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Brochures y catálogos</Title
+          >
+          <p class="text-white/70">
+            Diseño de materiales impresos para promoción de productos.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Publicidad y banners</Title
+          >
+          <p class="text-white/70">
+            Materiales visuales para campañas web e impresas.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2">Packaging</Title
+          >
+          <p class="text-white/70">
+            Diseño de empaques y etiquetas que destaquen tu producto.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >¿Por qué elegirnos?</Title
+        >
+        <div
+          class="w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Experiencia comprobada</Title
+            >
+            <p class="text-white/70">
+              Portafolio de proyectos exitosos en branding y diseño gráfico.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Estrategia visual</Title
+            >
+            <p class="text-white/70">
+              Cada proyecto se alinea con objetivos y valores de tu marca.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Tendencias actuales</Title
+            >
+            <p class="text-white/70">
+              Diseños modernos y atemporales que perduran en el tiempo.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Asesoría integral</Title
+            >
+            <p class="text-white/70">
+              Desde conceptualización hasta entrega final del proyecto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuestro proceso -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >Nuestro proceso</Title
+        >
+        <div
+          class="w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">1</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Descubrimiento</Title
+            >
+            <p class="text-white/70">
+              Conocemos tu marca, objetivos y público objetivo.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">2</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Conceptualización</Title
+            >
+            <p class="text-white/70">
+              Desarrollamos propuestas visuales estratégicas.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">3</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Refinamiento</Title
+            >
+            <p class="text-white/70">Ajustes y revisiones según tu feedback.</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">4</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Entrega</Title
+            >
+            <p class="text-white/70">
+              Archivos finales en todos los formatos necesarios.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-4xl text-center flex flex-col items-center">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >Contáctanos</Title
+        >
+        <div
+          class="mx-auto w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <p class="mt-6 text-white/80 max-w-2xl mx-auto">
+          Nuestro equipo está listo para darle vida visual a tus ideas.
+        </p>
+        <div
+          class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 text-white/80"
+        >
+          <a href="tel:+528131247103" class="hover:text-white transition-colors"
+            >Teléfono: +52 (81) 3124 7103</a
+          >
+          <div class="hidden md:block w-px h-6 bg-white/20"></div>
+          <a
+            href="mailto:contacto@pixelero.com.mx"
+            class="hover:text-white transition-colors"
+            >Correo: contacto@pixelero.com.mx</a
+          >
+          <div class="hidden md:block w-px h-6 bg-white/20"></div>
+          <a
+            href="https://maps.app.goo.gl/6kUdwEajxXiRkHff6"
+            class="hover:text-white transition-colors">Monterrey, NL</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</Layout>

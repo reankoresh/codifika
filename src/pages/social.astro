@@ -1,0 +1,456 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Title from "../components/Title.astro";
+---
+
+<Layout title="Redes Sociales">
+  <div class="bg-black text-white w-full">
+    <div class="flex justify-center pt-6">
+      <Navbar />
+    </div>
+
+    <!-- Hero -->
+    <section
+      class="min-h-dvh w-full flex items-center justify-center px-4 py-16"
+    >
+      <div class="w-11/12 max-w-5xl text-center flex flex-col items-center">
+        <Title
+          tag="h1"
+          unstyled={true}
+          class="text-4xl md:text-5xl font-bold text-white mb-3"
+        >
+          Gestión de redes sociales estratégica
+        </Title>
+        <div
+          class="mx-auto w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <p class="mt-6 text-white/80 max-w-2xl mx-auto">
+          Aumenta tu visibilidad, conecta con tu audiencia y convierte
+          seguidores en clientes con estrategia comprobada.
+        </p>
+      </div>
+    </section>
+
+    <!-- Objetivos principales -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Crecimiento de audiencia</Title
+          >
+          <p class="text-white/70">
+            Aumenta seguidores y engagement de forma orgánica y sostenible.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Posicionamiento de marca</Title
+          >
+          <p class="text-white/70">
+            Consolida tu presencia y posiciónate como referente en tu industria.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Conversiones y ventas</Title
+          >
+          <p class="text-white/70">
+            Transforma seguidores en clientes reales con estrategia enfocada en
+            resultados.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Creación de contenido</Title
+          >
+          <p class="text-white/70">
+            Contenido atractivo, original y alineado con tu marca.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Gestión de comunidad</Title
+          >
+          <p class="text-white/70">
+            Respuesta oportuna y construcción de relaciones sólidas con tu
+            audiencia.
+          </p>
+        </div>
+        <div>
+          <Title
+            tag="h3"
+            unstyled={true}
+            class="text-xl font-semibold text-white mb-2"
+            >Análisis y reportes</Title
+          >
+          <p class="text-white/70">
+            Métricas detalladas y KPIs para medir el impacto real de tus
+            campañas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plataformas especializadas -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >Plataformas en las que nos especializamos</Title
+        >
+        <div
+          class="w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Instagram</Title
+            >
+            <p class="text-white/70">
+              Estrategia visual, Stories, Reels y comunidad enfocada en
+              engagement.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Facebook</Title
+            >
+            <p class="text-white/70">
+              Campañas pagadas, comunidad y conversión de clientes.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">LinkedIn</Title
+            >
+            <p class="text-white/70">
+              B2B, posicionamiento de marca corporativa y generación de leads.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">TikTok</Title
+            >
+            <p class="text-white/70">
+              Contenido viral y conexión con audiencia joven y dinámica.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Twitter/X</Title
+            >
+            <p class="text-white/70">
+              Conversación en tiempo real y posicionamiento de marca.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">YouTube</Title
+            >
+            <p class="text-white/70">
+              Estrategia de video, canal y monetización de contenido.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios adicionales -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >Servicios incluidos</Title
+        >
+        <div
+          class="w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Estrategia personalizada</Title
+            >
+            <p class="text-white/70">
+              Plan integral alineado con tus objetivos comerciales.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Calendario de contenidos</Title
+            >
+            <p class="text-white/70">
+              Planificación y publicación programada para máxima visibilidad.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Publicidad pagada</Title
+            >
+            <p class="text-white/70">
+              Campañas optimizadas en Facebook, Instagram y otras plataformas.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Community management</Title
+            >
+            <p class="text-white/70">
+              Respuestas oportuna y moderación profesional 24/7.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Influencer marketing</Title
+            >
+            <p class="text-white/70">
+              Alianzas estratégicas con creadores de contenido relevante.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Crisis management</Title
+            >
+            <p class="text-white/70">
+              Gestión profesional de situaciones sensibles en redes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >¿Por qué elegirnos?</Title
+        >
+        <div
+          class="w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Resultados comprobados</Title
+            >
+            <p class="text-white/70">
+              Portafolio de casos de éxito con crecimiento de engagement y
+              conversiones.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Equipo especializado</Title
+            >
+            <p class="text-white/70">
+              Expertos en marketing digital actualizados con tendencias.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Enfoque estratégico</Title
+            >
+            <p class="text-white/70">
+              Cada campaña diseñada para alcanzar objetivos claros de negocio.
+            </p>
+          </div>
+          <div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2"
+              >Reportes transparentes</Title
+            >
+            <p class="text-white/70">
+              Métricas detalladas y seguimiento continuo del desempeño.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuestro proceso -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-6xl">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >Nuestro proceso</Title
+        >
+        <div
+          class="w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">1</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Análisis</Title
+            >
+            <p class="text-white/70">
+              Evaluamos tu negocio y competencia en redes sociales.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">2</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Estrategia</Title
+            >
+            <p class="text-white/70">
+              Diseñamos plan personalizado con objetivos alcanzables.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">3</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Ejecución</Title
+            >
+            <p class="text-white/70">
+              Implementamos campañas con contenido y publicidad optimizados.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-3"
+            >
+              <span class="text-white font-bold">4</span>
+            </div>
+            <Title
+              tag="h4"
+              unstyled={true}
+              class="text-lg font-semibold text-white mb-2">Optimización</Title
+            >
+            <p class="text-white/70">
+              Monitoreamos, analizamos y mejoramos continuamente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="w-full flex items-center justify-center px-4 py-16">
+      <div class="w-11/12 max-w-4xl text-center flex flex-col items-center">
+        <Title
+          tag="h2"
+          unstyled={true}
+          class="text-3xl md:text-4xl font-bold text-white mb-3"
+          >Contáctanos</Title
+        >
+        <div
+          class="mx-auto w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+        >
+        </div>
+        <p class="mt-6 text-white/80 max-w-2xl mx-auto">
+          Nuestro equipo está listo para llevar tu presencia digital al
+          siguiente nivel.
+        </p>
+        <div
+          class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 text-white/80"
+        >
+          <a href="tel:+528131247103" class="hover:text-white transition-colors"
+            >Teléfono: +52 (81) 3124 7103</a
+          >
+          <div class="hidden md:block w-px h-6 bg-white/20"></div>
+          <a
+            href="mailto:contacto@pixelero.com.mx"
+            class="hover:text-white transition-colors"
+            >Correo: contacto@pixelero.com.mx</a
+          >
+          <div class="hidden md:block w-px h-6 bg-white/20"></div>
+          <a
+            href="https://maps.app.goo.gl/6kUdwEajxXiRkHff6"
+            class="hover:text-white transition-colors">Monterrey, NL</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</Layout>
