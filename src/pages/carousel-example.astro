@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Carousel from "../components/Carousel.astro";
+
+// Importa tus imágenes del carrusel
+import slide1 from "../assets/images/carousel/slide1.jpg";
+import slide2 from "../assets/images/carousel/slide2.jpg";
+import slide3 from "../assets/images/carousel/slide3.jpg";
+import slide4 from "../assets/images/carousel/slide4.jpg";
+
+// Construir objetos SlideItem según el tipo requerido por Carousel
+const slides = [
+  {
+    src: slide1,
+    alt: "Slide 1",
+    title: "Slide 1",
+    description:
+      "Voice AI models powered by emotional intelligence for creators, developers, and enterprises.",
+  },
+  {
+    src: slide2,
+    alt: "Slide 2",
+    title: "Slide 2",
+    description:
+      "Voice AI models powered by emotional intelligence for creators, developers, and enterprises.",
+  },
+  {
+    src: slide3,
+    alt: "Slide 3",
+    title: "Slide 3",
+    description:
+      "Voice AI models powered by emotional intelligence for creators, developers, and enterprises.",
+  },
+  {
+    src: slide4,
+    alt: "Slide 4",
+    title: "Slide 4",
+    description:
+      "Voice AI models powered by emotional intelligence for creators, developers, and enterprises.",
+  },
+];
+---
+
+<Layout title="Ejemplo de carrusel">
+  <Carousel slides={slides} />
+</Layout>

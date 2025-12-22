@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/* Fellix weights (Regular & Italic). Añade solo los que existan en public/fonts. */
+
+/* 100 Thin */
+@font-face {
+  font-family: "Fellix";
+  src: url("/fonts/Fellix-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 200 ExtraLight */
+@font-face {
+  font-family: "Fellix";
+  src: url("/fonts/Fellix-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 300 Light */
+@font-face {
+  font-family: "Fellix";
+  src: url("/fonts/Fellix-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 400 Regular */
+@font-face {
+  font-family: "Fellix";
+  src: url("/fonts/Fellix-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 500 Medium */
+@font-face {
+  font-family: "Fellix";
+  src: url("/fonts/Fellix-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 600 SemiBold */
+@font-face {
+  font-family: "Fellix";
+  src: url("/fonts/Fellix-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 700 Bold */
+@font-face {
+  font-family: "Fellix";
+  src: url("/fonts/Fellix-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 800 ExtraBold */
+@font-face {
+  font-family: "Fellix";
+  src: url("/fonts/Fellix-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 900 Black */
+@font-face {
+  font-family: "Fellix";
+  src: url("/fonts/Fellix-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Fellix", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: "Fellix", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+}
+
+/* Estilos globales para <p> en Tailwind v4 (sin @apply) */
+p {
+  margin: 0; /* m-0 */
+  color: #44403a; /* text-[rgb(35,35,35)] */
+  -webkit-font-smoothing: antialiased; /* antialiased */
+  -moz-osx-font-smoothing: grayscale; /* antialiased */
+  hyphens: none; /* hyphens-none */
+  overflow-wrap: anywhere; /* break-words */
+  word-break: normal; /* mantener palabras normales */
+  font-size: 1rem; /* text-base */
+  line-height: 1.5rem; /* leading-6 */
+  font-weight: 400; /* font-normal */
+}
+
+/* Estilos globales para enlaces */
+a {
+  font-family: "Fellix", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+  text-decoration: none;
+}

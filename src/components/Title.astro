@@ -1,0 +1,71 @@
+---
+const {
+  tag = "h2",
+  class: className = "",
+  unstyled = false,
+  color = "stone",
+} = Astro.props;
+const Tag = tag as keyof HTMLElementTagNameMap;
+/* Clases Tailwind mapeadas por nivel para igualar los estilos actuales con leading-[1] */
+const sizeClasses =
+  tag === "h1"
+    ? "text-5xl leading-12 font-medium"
+    : tag === "h2"
+      ? "text-[2.1rem] leading-9 font-medium"
+      : tag === "h3"
+        ? "text-[1.8rem] leading-7 font-medium"
+        : tag === "h4"
+          ? "text-[1.4rem] leading-7 font-medium"
+          : tag === "h5"
+            ? "text-[1.2rem] leading-7 font-normal"
+            : tag === "h6"
+              ? "text-base leading-6 font-normal"
+              : "";
+
+/* Si unstyled=true, no aplicamos clases internas, solo las del consumidor */
+const baseClasses = "title m-0 hyphens-none break-words antialiased";
+// Mapeo estático para evitar problemas de purga en Tailwind
+const colorClasses = unstyled
+  ? ""
+  : color === "white"
+    ? "text-white"
+    : color === "lead"
+      ? "text-stone-900"
+      : color === "secondary"
+        ? "text-stone-400"
+        : "text-stone-700";
+const finalClasses = unstyled
+  ? className
+  : `${baseClasses} ${sizeClasses} ${colorClasses} ${className}`;
+---
+
+<Tag class={finalClasses}>
+  <slot />
+</Tag>
+
+<style>
+  /* Base: solo propiedades sin equivalentes en Tailwind */
+  .title {
+    /* Permite que el navegador emule los pesos faltantes si no existen en la fuente */
+    font-synthesis: weight style;
+
+    /* Evita que móviles cambien el tamaño del texto automáticamente */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+
+    /* Estabiliza el renderizado tipográfico */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Evita cortes/guiones inesperados y cambios de línea no deseados */
+    hyphens: none;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  @media (max-width: 480px) {
+    .title {
+      letter-spacing: 0;
+    }
+  }
+</style>

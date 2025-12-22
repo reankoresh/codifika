@@ -1,0 +1,181 @@
+---
+import { ChevronLeft, ChevronRight } from "lucide-astro";
+import { Image } from "astro:assets";
+import Title from "./Title.astro";
+
+export interface SlideItem {
+  src: ImageMetadata;
+  alt: string;
+  title: string;
+  description: string;
+}
+
+export interface Props {
+  slides: SlideItem[];
+}
+
+const { slides } = Astro.props;
+
+// Generar CSS dinámico para animaciones
+const slideDuration = 4.5; // segundos por slide
+const totalDuration = slides.length * slideDuration;
+---
+
+<div
+  id="carousel-container"
+  class="relative w-full h-dvh bg-gray-100 rounded-lg overflow-hidden"
+  data-slides-count={slides.length}
+>
+  <!-- Carousel wrapper -->
+  <div class="relative w-full h-dvh">
+    {
+      slides.map((slide, index) => (
+        <div
+          class={`carousel-slide absolute w-full h-dvh transition-opacity duration-300 ${index === 0 ? "opacity-100" : "opacity-0"}`}
+          data-slide-index={index}
+        >
+          <Image
+            src={slide.src}
+            alt={slide.alt}
+            class="w-full h-dvh object-cover"
+            loading="eager"
+            inferSize={true}
+          />
+          <div class="absolute inset-0 bg-black/50" />
+          <div class="absolute inset-0 flex items-center justify-center text-center ">
+            <div>
+              <Title tag="h1" color="white">
+                {slide.title}
+              </Title>
+              <Title tag="h5" color="white">
+                {slide.description}
+              </Title>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <!-- Indicadores dinámicos -->
+  <div
+    class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2"
+  >
+    {
+      slides.map((_, index) => (
+        <div
+          class={`carousel-indicator w-3 h-3 rounded-full ${index === 0 ? "bg-white/70" : "bg-white/30"}`}
+        />
+      ))
+    }
+  </div>
+
+  <!-- Botones de navegación -->
+  <button
+    id="prev-btn"
+    class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white/30 hover:bg-white/50 flex items-center justify-center transition-colors duration-200"
+    aria-label="Slide anterior"
+  >
+    <ChevronLeft class="w-6 h-6 text-white" />
+  </button>
+
+  <button
+    id="next-btn"
+    class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white/30 hover:bg-white/50 flex items-center justify-center transition-colors duration-200"
+    aria-label="Siguiente slide"
+  >
+    <ChevronRight class="w-6 h-6 text-white" />
+  </button>
+</div>
+
+<script>
+  let currentSlide = 0;
+  let autoPlayInterval: ReturnType<typeof setInterval> | undefined;
+  const slideDuration = 4500; // 4.5 segundos
+
+  function initCarousel() {
+    const container = document.getElementById("carousel-container");
+    if (!container) return;
+
+    const slidesCount = parseInt(container.dataset.slidesCount || "0");
+    const slides = container.querySelectorAll(".carousel-slide");
+    const indicators = container.querySelectorAll(".carousel-indicator");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    function showSlide(index: number) {
+      // Ocultar todos los slides
+      slides.forEach((slide) => slide.classList.remove("opacity-100"));
+      slides.forEach((slide) => slide.classList.add("opacity-0"));
+
+      // Resetear indicadores
+      indicators.forEach((indicator) => {
+        indicator.classList.remove("bg-white/70");
+        indicator.classList.add("bg-white/30");
+      });
+
+      // Mostrar slide actual
+      if (slides[index]) {
+        slides[index].classList.remove("opacity-0");
+        slides[index].classList.add("opacity-100");
+      }
+
+      // Activar indicador actual
+      if (indicators[index]) {
+        indicators[index].classList.remove("bg-white/30");
+        indicators[index].classList.add("bg-white/70");
+      }
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slidesCount;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = currentSlide === 0 ? slidesCount - 1 : currentSlide - 1;
+      showSlide(currentSlide);
+    }
+
+    function startAutoPlay() {
+      autoPlayInterval = setInterval(nextSlide, slideDuration);
+    }
+
+    function stopAutoPlay() {
+      clearInterval(autoPlayInterval);
+    }
+
+    // Event listeners
+    nextBtn?.addEventListener("click", () => {
+      stopAutoPlay();
+      nextSlide();
+      startAutoPlay();
+    });
+
+    prevBtn?.addEventListener("click", () => {
+      stopAutoPlay();
+      prevSlide();
+      startAutoPlay();
+    });
+
+    // Iniciar autoplay
+    startAutoPlay();
+  }
+
+  // Inicializar cuando el DOM esté listo
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initCarousel);
+  } else {
+    initCarousel();
+  }
+</script>
+
+<style>
+  .carousel-slide {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .carousel-indicator {
+    transition: background-color 0.3s ease;
+  }
+</style>
