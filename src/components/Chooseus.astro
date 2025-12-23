@@ -1,0 +1,63 @@
+---
+// Chooseus.astro
+// Componente para la sección "¿Por qué elegirnos?"
+import Title from "./Title.astro";
+---
+
+<section class="w-full flex items-center justify-center px-4 py-16">
+  <div class="w-11/12 max-w-6xl">
+    <Title
+      tag="h2"
+      unstyled={true}
+      class="text-3xl md:text-4xl font-bold text-white mb-3"
+      >¿Por qué elegirnos?</Title
+    >
+    <div
+      class="w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+    >
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+      <div>
+        <Title
+          tag="h4"
+          unstyled={true}
+          class="text-lg font-semibold text-white mb-2"
+          >Tendencias en diseño</Title
+        >
+        <p class="text-white/70">
+          Actualizaciones constantes para conectar con tu mercado meta.
+        </p>
+      </div>
+      <div>
+        <Title
+          tag="h4"
+          unstyled={true}
+          class="text-lg font-semibold text-white mb-2"
+          >Atención especializada</Title
+        >
+        <p class="text-white/70">
+          Acompañamiento de marketing y diseño durante todo el proyecto.
+        </p>
+      </div>
+      <div>
+        <Title
+          tag="h4"
+          unstyled={true}
+          class="text-lg font-semibold text-white mb-2">Soporte técnico</Title
+        >
+        <p class="text-white/70">Infraestructura segura y soporte oportuno.</p>
+      </div>
+      <div>
+        <Title
+          tag="h4"
+          unstyled={true}
+          class="text-lg font-semibold text-white mb-2"
+          >Cobertura nacional</Title
+        >
+        <p class="text-white/70">
+          Experiencia operando en múltiples ciudades de México y USA.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

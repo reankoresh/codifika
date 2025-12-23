@@ -1,0 +1,25 @@
+---
+// Hero.astro
+// Componente reutilizable para la sección Hero
+import Title from "./Title.astro";
+const { titulo, descripcion } = Astro.props;
+---
+
+<section class="min-h-dvh w-full flex items-center justify-center px-4 py-16">
+  <div class="w-11/12 max-w-5xl text-center flex flex-col items-center">
+    <Title
+      tag="h1"
+      unstyled={true}
+      class="text-4xl md:text-5xl font-bold text-white mb-3"
+    >
+      {titulo}
+    </Title>
+    <div
+      class="mx-auto w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
+    >
+    </div>
+    <p class="mt-6 text-white/80 max-w-2xl mx-auto">
+      {descripcion}
+    </p>
+  </div>
+</section>

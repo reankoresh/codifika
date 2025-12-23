@@ -1,0 +1,17 @@
+---
+// Card.astro
+// Componente reutilizable para mostrar un servicio en formato card
+import Title from "./Title.astro";
+const { titulo, descripcion } = Astro.props;
+---
+
+<div
+  class="bg-[#D8FF8E] text-black rounded-2xl p-8 shadow-lg flex flex-col items-center text-center gap-3"
+>
+  <Title tag="h3" unstyled={true} class="text-2xl font-semibold text-black">
+    {titulo}
+  </Title>
+  <p class="text-black/80">
+    {descripcion}
+  </p>
+</div>

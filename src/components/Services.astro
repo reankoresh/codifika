@@ -1,0 +1,20 @@
+---
+import Card from "./Card.astro";
+
+interface Servicio {
+  titulo: string;
+  descripcion: string;
+}
+
+const { servicios = [] } = Astro.props as { servicios?: Servicio[] };
+---
+
+<section class="w-full flex items-center justify-center px-4 py-16">
+  <div class="w-11/12 max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6">
+    {
+      servicios.map((servicio: Servicio) => (
+        <Card titulo={servicio.titulo} descripcion={servicio.descripcion} />
+      ))
+    }
+  </div>
+</section>
