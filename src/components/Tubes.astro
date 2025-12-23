@@ -11,12 +11,16 @@ import Title from "./Title.astro";
       <slot />
     </div>
     <div id="lottie" class="h-80"></div>
-    <Title tag="h1" color="white">
+    <Title
+      tag="h1"
+      unstyled={true}
+      class="text-4xl md:text-5xl font-bold text-white mb-2"
+    >
       <span>Webs Explosivas para</span>
       <span class="block">Empresas & Visionarios</span>
     </Title>
 
-    <Title tag="h5" color="white" class="pt-5">
+    <Title tag="h5" color="white">
       <span class="block"
         >Diseñamos Estrategias con IA para Acelerar tu Negocio.</span
       >

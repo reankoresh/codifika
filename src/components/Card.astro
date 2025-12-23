@@ -2,12 +2,19 @@
 // Card.astro
 // Componente reutilizable para mostrar un servicio en formato card
 import Title from "./Title.astro";
-const { titulo, descripcion } = Astro.props;
+const { titulo, descripcion, icon: Icon } = Astro.props;
 ---
 
 <div
-  class="bg-[#D8FF8E] text-black rounded-2xl p-8 shadow-lg flex flex-col items-center text-center gap-3"
+  class="bg-[#D8FF8E] text-black rounded-2xl p-8 shadow-lg flex flex-col items-center text-center gap-3 hover:scale-105 transition-transform duration-300 hover:bg-[#fff98f]"
 >
+  {
+    Icon && (
+      <div class="mb-2 text-black">
+        <Icon size={36} strokeWidth={2} />
+      </div>
+    )
+  }
   <Title tag="h3" unstyled={true} class="text-2xl font-semibold text-black">
     {titulo}
   </Title>

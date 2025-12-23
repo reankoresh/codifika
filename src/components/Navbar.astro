@@ -11,7 +11,10 @@ import { navLinks } from "./Links.astro";
   <div class="hidden md:flex items-center gap-6 ml-7">
     {
       navLinks.map((link) => (
-        <a href={link.href} class="relative overflow-hidden h-6 group">
+        <a
+          href={link.href}
+          class="relative overflow-hidden h-6 group hover:text-[#fff98f]"
+        >
           <span class="block group-hover:-translate-y-full transition-transform duration-300">
             {link.name}
           </span>
@@ -59,7 +62,10 @@ import { navLinks } from "./Links.astro";
   >
     {
       navLinks.map((link) => (
-        <a class="hover:text-indigo-600" href={link.href}>
+        <a
+          class="hover:text-[#fff98f]"
+          href={link.href}
+        >
           {link.name}
         </a>
       ))

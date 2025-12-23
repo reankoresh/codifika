@@ -1,5 +1,28 @@
 ---
 import Card from "./Card.astro";
+import {
+  Palette,
+  Briefcase,
+  Sparkles,
+  BookOpen,
+  Image,
+  Package,
+  Camera,
+  Video,
+  Building2,
+  Users,
+  BarChart2,
+  Megaphone,
+  FileText,
+  ShieldCheck,
+  UserPlus,
+  MessageCircle,
+  PieChart,
+  Mic,
+  Headphones,
+  Podcast,
+  UserCheck,
+} from "lucide-astro";
 
 interface Servicio {
   titulo: string;
@@ -12,9 +35,75 @@ const { servicios = [] } = Astro.props as { servicios?: Servicio[] };
 <section class="w-full flex items-center justify-center px-4 py-16">
   <div class="w-11/12 max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6">
     {
-      servicios.map((servicio: Servicio) => (
-        <Card titulo={servicio.titulo} descripcion={servicio.descripcion} />
-      ))
+      servicios.map((servicio: Servicio) => {
+        // Asignar icono según el título del servicio
+        let icon = undefined;
+        switch (servicio.titulo) {
+          case "Identidad corporativa":
+            icon = Palette;
+            break;
+          case "Material corporativo":
+            icon = Briefcase;
+            break;
+          case "Branding":
+            icon = Sparkles;
+            break;
+          case "Brochures y catálogos":
+            icon = BookOpen;
+            break;
+          case "Publicidad y banners":
+            icon = Image;
+            break;
+          case "Packaging":
+            icon = Package;
+            break;
+          case "Fotografía aérea":
+            icon = Camera;
+            break;
+          case "Videografía con drones":
+            icon = Video;
+            break;
+          case "Avance de obra":
+            icon = Building2;
+            break;
+          case "Cobertura de eventos":
+            icon = Users;
+            break;
+          case "Inspección con drones":
+            icon = ShieldCheck;
+            break;
+          case "Comerciales publicitarios":
+            icon = Megaphone;
+            break;
+          case "Crecimiento de audiencia":
+            icon = UserPlus;
+            break;
+          case "Posicionamiento de marca":
+            icon = BarChart2;
+            break;
+          case "Conversiones y ventas":
+            icon = PieChart;
+            break;
+          case "Creación de contenido":
+            icon = FileText;
+            break;
+          case "Gestión de comunidad":
+            icon = MessageCircle;
+            break;
+          case "Análisis y reportes":
+            icon = BarChart2;
+            break;
+          default:
+            icon = Sparkles;
+        }
+        return (
+          <Card
+            titulo={servicio.titulo}
+            descripcion={servicio.descripcion}
+            icon={icon}
+          />
+        );
+      })
     }
   </div>
 </section>
