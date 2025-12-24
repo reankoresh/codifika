@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 175.02 131.01">
+  <!-- Generator: Adobe Illustrator 30.1.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 136)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+
+      .st1 {
+        opacity: .3;
+      }
+
+      .st2 {
+        opacity: .5;
+      }
+    </style>
+  </defs>
+  <g id="S3" class="st1">
+    <path class="st0" d="M168.35,49.37h0L125.27,6.3c-4.1-3.9-9.64-6.3-15.74-6.3s-11.65,2.4-15.74,6.3l-.39.39c-.14.12-.26.25-.39.39-3.9,4.1-6.3,9.64-6.3,15.74s2.55,12,6.68,16.14l8.9,8.9c9.75,9.75,9.75,25.56,0,35.31l-8.51,8.51-.78.78c-3.9,4.09-6.3,9.63-6.3,15.74s2.55,12,6.68,16.14c4.13,4.13,9.83,6.68,16.14,6.68s12.01-2.55,16.14-6.68l42.68-42.68c4.13-4.13,6.68-9.83,6.68-16.14s-2.55-12-6.68-16.13v-.02Z"/>
+    <animate attributeName="opacity" values="0;0;0;0.3;0.3;0.3;0;0" keyTimes="0;0.18;0.36;0.54;0.72;0.91;0.95;1" dur="4s" repeatCount="indefinite"/>
+    <set attributeName="display" to="inline" begin="2.4s" dur="2s" repeatCount="indefinite"/>
+  </g>
+  <g id="S2" class="st2">
+    <path class="st0" d="M139.11,49.37h0L96.04,6.3c-4.1-3.9-9.64-6.3-15.74-6.3s-11.65,2.4-15.74,6.3l-.39.39c-.14.12-.26.25-.39.39-3.9,4.1-6.3,9.64-6.3,15.74s2.55,12,6.68,16.14l8.9,8.9c9.75,9.75,9.75,25.56,0,35.31l-8.51,8.51-.78.78c-3.9,4.09-6.3,9.63-6.3,15.74s2.55,12,6.68,16.14c4.13,4.13,9.83,6.68,16.14,6.68s12.01-2.55,16.14-6.68l42.68-42.68c4.13-4.13,6.68-9.83,6.68-16.14s-2.55-12-6.68-16.13v-.02Z"/>
+    <animate attributeName="opacity" values="0;0;0.5;0.5;0.5;0.5;0;0" keyTimes="0;0.18;0.36;0.54;0.72;0.91;0.95;1" dur="4s" repeatCount="indefinite"/>
+    <set attributeName="display" to="inline" begin="1.6s" dur="2.8s" repeatCount="indefinite"/>
+  </g>
+  <g id="S1">
+    <path class="st0" d="M109.88,49.37h0L66.8,6.3c-4.1-3.9-9.64-6.3-15.74-6.3s-11.65,2.4-15.74,6.3l-.39.39c-.14.12-.26.25-.39.39-3.9,4.1-6.3,9.64-6.3,15.74s2.55,12,6.68,16.14l8.9,8.9c9.75,9.75,9.75,25.56,0,35.31l-8.51,8.51-.78.78c-3.9,4.09-6.3,9.63-6.3,15.74s2.55,12,6.68,16.14c4.13,4.13,9.83,6.68,16.14,6.68s12.01-2.55,16.14-6.68l42.68-42.68c4.13-4.13,6.68-9.83,6.68-16.14s-2.55-12-6.68-16.13v-.02Z"/>
+    <animate attributeName="opacity" values="0;1;1;1;1;1;0;0" keyTimes="0;0.18;0.36;0.54;0.72;0.91;0.95;1" dur="4s" repeatCount="indefinite"/>
+    <set attributeName="display" to="inline" begin="0.8s" dur="3.6s" repeatCount="indefinite"/>
+  </g>
+  <circle id="Circle" class="st0" cx="20.15" cy="65.5" r="20.15" opacity="0">
+    <animate attributeName="opacity" values="1;1;1;1;1;1;0;0" keyTimes="0;0.18;0.36;0.54;0.72;0.82;0.91;1" dur="4s" repeatCount="indefinite"/>
+  </circle>
+</svg>
