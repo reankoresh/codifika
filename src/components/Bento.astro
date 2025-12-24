@@ -1,0 +1,248 @@
+---
+import Title from "../components/Title.astro";
+import DynamicServices from "../components/DynamicServices.jsx";
+---
+
+<section
+  class="min-h-screen bg-[#0a0a0c50] text-white p-4 md:p-8 font-sans relative z-10 overflow-hidden"
+>
+  <!-- Fondos decorativos -->
+  <div
+    class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[120px] -z-10 animate-pulse"
+  >
+  </div>
+  <div
+    class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-600/15 rounded-full blur-[120px] -z-10"
+  >
+  </div>
+
+  <div
+    class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 [perspective:1200px]"
+  >
+    <!-- Columna Izquierda -->
+    <div class="md:col-span-3 flex flex-col gap-6">
+      <div
+        class="bg-white/[0.03] backdrop-blur-xl p-8 rounded-[2rem] flex flex-col justify-between h-80 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 hover:[transform:rotateY(10deg)_translateZ(20px)] group"
+      >
+        <div>
+          <div
+            class="text-indigo-500 mb-4 drop-shadow-[0_0_10px_rgba(99,102,241,0.5)] group-hover:scale-110 transition-transform"
+          >
+            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"
+              ><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+              ></path></svg
+            >
+          </div>
+          <Title
+            tag="h2"
+            color="indigo"
+            class="text-2xl font-extrabold leading-tight tracking-tight"
+            >¡Software que Vende, Impacta y Escala!</Title
+          >
+        </div>
+        <div class="text-sm text-gray-400">
+          <Title tag="h3" color="white" class="font-bold text-white/90"
+            >Codifika.mx — Tu éxito, nuestro código.</Title
+          >
+          <p class="opacity-70">Innovación local, alcance global.</p>
+        </div>
+      </div>
+
+      <div
+        class="bg-white/[0.02] backdrop-blur-md p-6 rounded-[2rem] border border-white/5 shadow-xl hover:bg-white/[0.05] transition-all"
+      >
+        <Title
+          tag="h3"
+          color="indigo"
+          class="text-3xl font-black text-indigo-400 drop-shadow-[0_2px_10px_rgba(129,140,248,0.3)]"
+          >12K+</Title
+        >
+        <p class="text-gray-400 text-sm mb-4">
+          Empresas y visionarios que ya despegaron.
+        </p>
+        <div class="flex -space-x-2">
+          <img
+            class="w-10 h-10 rounded-full border-2 border-[#0a0a0c] ring-1 ring-white/10"
+            src="https://i.pravatar.cc/100?u=1"
+            alt="User"
+          />
+          <img
+            class="w-10 h-10 rounded-full border-2 border-[#0a0a0c] ring-1 ring-white/10"
+            src="https://i.pravatar.cc/100?u=2"
+            alt="User"
+          />
+          <img
+            class="w-10 h-10 rounded-full border-2 border-[#0a0a0c] ring-1 ring-white/10"
+            src="https://i.pravatar.cc/100?u=3"
+            alt="User"
+          />
+        </div>
+      </div>
+
+      <button
+        class="relative group bg-gradient-to-br from-indigo-600 to-purple-700 p-6 rounded-[2rem] overflow-hidden shadow-[0_15px_30px_-5px_rgba(79,70,229,0.5)] transition-all hover:scale-[1.03] hover:shadow-indigo-500/40"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+        >
+        </div>
+        <span
+          class="relative z-10 flex items-center justify-center gap-3 font-bold text-lg"
+          >🚀 Inicia y domina tu mercado</span
+        >
+      </button>
+    </div>
+
+    <!-- Columna Central -->
+    <div class="md:col-span-6 flex flex-col gap-6">
+      <div
+        class="bg-gradient-to-b from-white/[0.08] to-transparent rounded-[3rem] p-[1px] h-full shadow-2xl"
+      >
+        <div
+          class="bg-[#0f0f15]/90 backdrop-blur-3xl rounded-[3rem] flex flex-col items-center text-center overflow-hidden h-full border border-white/5 relative"
+        >
+          <div class="mt-12 px-6 relative z-10">
+            <span
+              class="bg-indigo-500/10 text-indigo-400 px-4 py-1.5 rounded-full text-[10px] font-bold border border-indigo-500/20 uppercase tracking-[0.2em]"
+              >Agencia de Desarrollo</span
+            >
+            <Title
+              tag="h2"
+              color="white"
+              unstyled={true}
+              class="text-4xl md:text-5xl font-bold text-white"
+            >
+              Transformamos tu visión en <br />
+              <DynamicServices client:only="react" />
+            </Title>
+          </div>
+
+          <div class="relative mt-auto w-full flex justify-center py-16">
+            <div
+              class="absolute w-72 h-72 bg-indigo-500/25 blur-[100px] animate-pulse"
+            >
+            </div>
+            <div
+              class="w-56 h-56 bg-gradient-to-tr from-indigo-600 via-purple-500 to-pink-500 rounded-full shadow-[0_0_60px_rgba(79,70,229,0.5)] flex items-center justify-center animate-[bounce_5s_infinite] border-t-2 border-white/40 relative"
+            >
+              <div
+                class="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.2),transparent)]"
+              >
+              </div>
+              <code
+                class="text-white text-5xl font-black drop-shadow-2xl relative z-10 italic"
+                >&lt;/&gt;</code
+              >
+            </div>
+          </div>
+
+          <div
+            class="grid grid-cols-2 w-full border-t border-white/10 mt-auto bg-white/[0.01]"
+          >
+            <div
+              class="p-8 border-r border-white/10 text-left hover:bg-white/[0.02] transition-colors"
+            >
+              <Title tag="h4" color="indigo" class="font-bold"
+                >Velocidad extrema</Title
+              >
+              <p class="text-xs text-gray-500 mt-1">
+                +90 en Lighthouse, carga instantánea.
+              </p>
+            </div>
+            <div class="p-8 text-left hover:bg-white/[0.02] transition-colors">
+              <Title tag="h4" color="purple" class="font-bold"
+                >Escalabilidad sin límites</Title
+              >
+              <p class="text-xs text-gray-500 mt-1">
+                Nube, microservicios y evolución continua.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna Derecha -->
+    <div class="md:col-span-3 flex flex-col gap-6">
+      <div
+        class="bg-white/[0.03] p-6 rounded-[2.5rem] border border-white/10 flex justify-between items-center shadow-inner"
+      >
+        <Title
+          tag="h5"
+          color="gray"
+          class="text-xs font-bold uppercase tracking-widest text-gray-400"
+          >Motor de IA Propio</Title
+        >
+        <div
+          class="w-12 h-6 bg-[#0a0a0c] rounded-full relative border border-white/10"
+        >
+          <div
+            class="absolute right-1 top-1 w-4 h-4 bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-full shadow-[0_0_10px_rgba(99,102,241,1)]"
+          >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-white/[0.03] backdrop-blur-md p-8 rounded-[2rem] border border-white/10 flex flex-col items-center justify-center h-52 shadow-2xl group hover:-translate-y-2 transition-all duration-300"
+      >
+        <Title
+          tag="h5"
+          color="white"
+          class="text-5xl font-black text-white group-hover:scale-110 transition-transform duration-500"
+          >99/100</Title
+        >
+        <p
+          class="text-indigo-400/80 text-center text-[10px] font-bold uppercase tracking-widest mt-3"
+        >
+          ¡Tu web más rápida que la competencia!
+        </p>
+      </div>
+
+      <div
+        class="bg-white/[0.02] p-8 rounded-[3rem] border border-white/5 flex-grow relative overflow-hidden group"
+      >
+        <Title
+          tag="h5"
+          color="gray"
+          class="font-bold mb-6 text-sm uppercase tracking-widest"
+          >Especialidades</Title
+        >
+        <div class="flex flex-wrap gap-2 relative z-10">
+          {
+            [
+              "React",
+              "NextJS",
+              "Tailwind",
+              "Astro",
+              "Node.js",
+              "Express",
+              "MongoDB",
+              "PostgreSQL",
+              "Firebase",
+              "Vercel",
+              "AWS",
+              "Docker",
+              "SEO",
+              "eCommerce",
+              "Stripe",
+              "OpenAI",
+              "Figma",
+              "Three.js",
+              "Framer Motion",
+              "TypeScript",
+            ].map((tech) => (
+              <span class="bg-white/5 backdrop-blur-sm text-white/80 px-4 py-1.5 rounded-full text-[10px] border border-white/10 cursor-default transition-all duration-300 hover:bg-gradient-to-r hover:from-[#f967fb] hover:via-[#6958d5] hover:to-[#53bc28] hover:text-white hover:scale-110">
+                #{tech}
+              </span>
+            ))
+          }
+        </div>
+        <div
+          class="absolute -bottom-8 -right-8 w-32 h-32 bg-indigo-600/10 rounded-full blur-3xl group-hover:bg-indigo-600/30 transition-all duration-1000"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

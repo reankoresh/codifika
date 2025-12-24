@@ -1,5 +1,6 @@
 ---
 import Title from "./Title.astro";
+import AnimatedWords from "./AnimatedWords.jsx";
 ---
 
 <div id="app">
@@ -14,10 +15,12 @@ import Title from "./Title.astro";
     <Title
       tag="h1"
       unstyled={true}
-      class="text-4xl md:text-5xl font-bold text-white mb-2"
+      class="text-4xl md:text-5xl font-bold text-white mb-1"
     >
       <span>Webs Explosivas para</span>
-      <span class="block">Empresas & Visionarios</span>
+      <span class="block">
+        <AnimatedWords client:only="react" />
+      </span>
     </Title>
 
     <Title tag="h5" color="white">

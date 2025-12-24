@@ -1,97 +1,103 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import { navLinks } from "./Links.astro";
 ---
 
-<nav
-  class="flex items-center border mx-4 max-md:w-full max-md:justify-between border-slate-400 px-6 py-4 rounded-full text-white text-sm"
+<Layout>
+  <nav class="fixed top-0 left-0 w-full z-50 flex justify-center pt-5">
+    <div
+      class="w-10/12 max-md:w-full grid grid-cols-[1fr_3fr_1fr] max-md:grid-cols-1 items-center border border-slate-400 px-6 py-4 rounded-full text-white text-sm bg-slate-900/80 backdrop-blur mx-auto"
+    >
+      <!-- Bloque Izquierdo: Logo -->
+      <div class="flex justify-start">
+        <a href="/">
+          <span class="font-bold text-lg">Codifika</span>
+        </a>
+      </div>
+      <!-- Bloque Central: Links -->
+      <div class="hidden md:flex justify-center items-center gap-4">
+        {
+          navLinks.map((link) => (
+            <a
+              href={link.href}
+              class="relative overflow-hidden h-6 group hover:text-[#fff98f]"
+            >
+              <span class="block group-hover:-translate-y-full transition-transform duration-300">
+                {link.name}
+              </span>
+              <span class="block absolute top-full left-0 group-hover:translate-y-[-100%] transition-transform duration-300">
+                {link.name}
+              </span>
+            </a>
+          ))
+        }
+      </div>
+      <!-- Bloque Derecho: Botones -->
+      <div class="hidden md:flex justify-end items-center gap-4">
+        <button
+          class="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition"
+        >
+          Contacto
+        </button>
+        <button
+          class="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300"
+        >
+          Iniciar Sesión
+        </button>
+      </div>
+    </div>
+  </nav>
+</Layout>
+<button
+  id="menuToggle"
+  class="md:hidden text-gray-600"
+  type="button"
+  aria-label="Abrir menú"
 >
-  <a href="/">
-    <span class="font-bold text-lg">Codifika</span>
-  </a>
-  <div class="hidden md:flex items-center gap-6 ml-7">
-    {
-      navLinks.map((link) => (
-        <a
-          href={link.href}
-          class="relative overflow-hidden h-6 group hover:text-[#fff98f]"
-        >
-          <span class="block group-hover:-translate-y-full transition-transform duration-300">
-            {link.name}
-          </span>
-          <span class="block absolute top-full left-0 group-hover:translate-y-[-100%] transition-transform duration-300">
-            {link.name}
-          </span>
-        </a>
-      ))
-    }
-  </div>
-
-  <div class="hidden ml-14 md:flex items-center gap-4">
-    <button
-      class="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition"
-    >
-      Contacto
-    </button>
-    <button
-      class="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300"
-    >
-      Iniciar Sesión
-    </button>
-  </div>
+  <svg
+    class="w-6 h-6"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M4 6h16M4 12h16M4 18h16"></path>
+  </svg>
+</button>
+<div
+  id="mobileMenu"
+  class="absolute hidden top-48 text-base left-0 bg-black w-full flex-col items-center gap-4 h-dvh z-10"
+>
+  {
+    navLinks.map((link) => (
+      <a class="hover:text-[#fff98f]" href={link.href}>
+        {link.name}
+      </a>
+    ))
+  }
   <button
-    id="menuToggle"
-    class="md:hidden text-gray-600"
-    type="button"
-    aria-label="Abrir menú"
+    class="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition"
   >
-    <svg
-      class="w-6 h-6"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      viewBox="0 0 24 24"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path d="M4 6h16M4 12h16M4 18h16"></path>
-    </svg>
+    Contacto
   </button>
-  <div
-    id="mobileMenu"
-    class="absolute hidden top-48 text-base left-0 bg-black w-full flex-col items-center gap-4 h-dvh z-10"
+  <button
+    class="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300"
   >
-    {
-      navLinks.map((link) => (
-        <a
-          class="hover:text-[#fff98f]"
-          href={link.href}
-        >
-          {link.name}
-        </a>
-      ))
-    }
-    <button
-      class="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition"
-    >
-      Contacto
-    </button>
-    <button
-      class="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300"
-    >
-      Iniciar Sesión
-    </button>
-  </div>
+    Iniciar Sesión
+  </button>
+</div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const menuToggle = document.getElementById("menuToggle");
-      const mobileMenu = document.getElementById("mobileMenu");
-      if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener("click", () => {
-          mobileMenu.classList.toggle("hidden");
-          mobileMenu.classList.toggle("flex");
-        });
-      }
-    });
-  </script>
-</nav>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+      });
+    }
+  });
+</script>
