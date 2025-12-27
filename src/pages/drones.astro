@@ -1,8 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 import Title from "../components/Title.astro";
+import Services, { todosLosServicios } from "../components/Services.astro";
 ---
 
 <Layout title="Renta de Drones">
@@ -11,101 +13,13 @@ import Title from "../components/Title.astro";
       <Navbar />
     </div>
 
-    <!-- Hero -->
-    <section
-      class="min-h-dvh w-full flex items-center justify-center px-4 py-16"
-    >
-      <div class="w-11/12 max-w-5xl text-center flex flex-col items-center">
-        <Title
-          tag="h1"
-          unstyled={true}
-          class="text-4xl md:text-5xl font-bold text-white mb-3"
-        >
-          Renta de drones y fotografía aérea profesional
-        </Title>
-        <div
-          class="mx-auto w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
-        >
-        </div>
-        <p class="mt-6 text-white/80 max-w-2xl mx-auto">
-          Perspectivas únicas desde el cielo con equipamiento certificado y
-          operadores especializados para tus proyectos.
-        </p>
-      </div>
-    </section>
+    <Hero
+      titulo="Renta de drones y fotografía aérea profesional"
+      descripcion="Perspectivas únicas desde el cielo con equipamiento certificado y operadores especializados para tus proyectos."
+    />
 
     <!-- Servicios de drones -->
-    <section class="w-full flex items-center justify-center px-4 py-16">
-      <div class="w-11/12 max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <Title
-            tag="h3"
-            unstyled={true}
-            class="text-xl font-semibold text-white mb-2"
-            >Fotografía aérea</Title
-          >
-          <p class="text-white/70">
-            Tomas de alta calidad desde perspectiva aérea para proyectos
-            comerciales.
-          </p>
-        </div>
-        <div>
-          <Title
-            tag="h3"
-            unstyled={true}
-            class="text-xl font-semibold text-white mb-2"
-            >Videografía con drones</Title
-          >
-          <p class="text-white/70">
-            Video 4K profesional con estabilización de cine para máximo impacto.
-          </p>
-        </div>
-        <div>
-          <Title
-            tag="h3"
-            unstyled={true}
-            class="text-xl font-semibold text-white mb-2">Avance de obra</Title
-          >
-          <p class="text-white/70">
-            Documentación visual precisa y modelos 3D de proyectos
-            constructivos.
-          </p>
-        </div>
-        <div>
-          <Title
-            tag="h3"
-            unstyled={true}
-            class="text-xl font-semibold text-white mb-2"
-            >Cobertura de eventos</Title
-          >
-          <p class="text-white/70">
-            Tomas aéreas de celebraciones, conferencias y eventos especiales.
-          </p>
-        </div>
-        <div>
-          <Title
-            tag="h3"
-            unstyled={true}
-            class="text-xl font-semibold text-white mb-2"
-            >Inspección con drones</Title
-          >
-          <p class="text-white/70">
-            Análisis visual de infraestructura en áreas difíciles de acceso.
-          </p>
-        </div>
-        <div>
-          <Title
-            tag="h3"
-            unstyled={true}
-            class="text-xl font-semibold text-white mb-2"
-            >Comerciales publicitarios</Title
-          >
-          <p class="text-white/70">
-            Videos profesionales con tomas aéreas espectaculares para marketing.
-          </p>
-        </div>
-      </div>
-    </section>
+    <Services servicios={todosLosServicios.slice(24, 30)} />
 
     <!-- Características principales -->
     <section class="w-full flex items-center justify-center px-4 py-16">

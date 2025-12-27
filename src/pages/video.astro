@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import Title from "../components/Title.astro";
 import Hero from "../components/Hero.astro";
-import Services from "../components/Services.astro";
+import Services, { todosLosServicios } from "../components/Services.astro";
 import Chooseus from "../components/Chooseus.astro";
 import Contact from "../components/Contact.astro";
 ---
@@ -20,41 +20,7 @@ import Contact from "../components/Contact.astro";
       descripcion="Producción audiovisual de alto impacto que comunica tu mensaje y conecta con tu audiencia."
     />
 
-    <Services
-      servicios={[
-        {
-          titulo: "Producción de video",
-          descripcion:
-            "Grabación y dirección de video profesional para tu empresa.",
-        },
-        {
-          titulo: "Postproducción",
-          descripcion:
-            "Edición, color grading y efectos especiales de calidad cine.",
-        },
-        {
-          titulo: "Animación 2D y 3D",
-          descripcion:
-            "Animaciones y gráficos dinámicos para explicar tus servicios.",
-        },
-        {
-          titulo: "Fotografía comercial",
-          descripcion:
-            "Sesiones fotográficas profesionales de productos y eventos.",
-        },
-        {
-          titulo: "Videografía con drones",
-          descripcion:
-            "Tomas aéreas y perspectivas únicas para mayor impacto visual.",
-        },
-        {
-          titulo: "Voz en off y música",
-          descripcion:
-            "Locución profesional y selección de audio para tus videos.",
-        },
-      ]}
-    />
-
+    <Services servicios={todosLosServicios.slice(12, 18)} />
     <!-- Tipos de video -->
     <section class="w-full flex items-center justify-center px-4 py-16">
       <div class="w-11/12 max-w-6xl">

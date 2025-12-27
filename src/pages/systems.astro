@@ -3,9 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
-import Services from "../components/Services.astro";
 import Chooseus from "../components/Chooseus.astro";
 import Contact from "../components/Contact.astro";
+import Services, { todosLosServicios } from "../components/Services.astro";
 ---
 
 <Layout title="Sistemas a la Medida">
@@ -19,40 +19,7 @@ import Contact from "../components/Contact.astro";
       descripcion="Soluciones tecnológicas personalizadas para transformar tus ideas en sistemas funcionales y escalables."
     />
 
-    <Services
-      servicios={[
-        {
-          titulo: "Aplicaciones web",
-          descripcion:
-            "Plataformas digitales robustas y escalables para gestionar tu negocio desde cualquier dispositivo.",
-        },
-        {
-          titulo: "Sistemas de comunicación",
-          descripcion:
-            "Herramientas internas para optimizar la colaboración y comunicación entre equipos.",
-        },
-        {
-          titulo: "Aplicaciones móviles",
-          descripcion:
-            "Soluciones nativas e híbridas para iOS y Android que llevan tus servicios al bolsillo de tus clientes.",
-        },
-        {
-          titulo: "Portales de servicios",
-          descripcion:
-            "Plataformas en la nube para ofrecer servicios digitales a tus clientes con máxima seguridad.",
-        },
-        {
-          titulo: "Sistemas de gestión",
-          descripcion:
-            "Herramientas administrativas personalizadas para controlar inventarios, ventas y operaciones.",
-        },
-        {
-          titulo: "Integración de sistemas",
-          descripcion:
-            "Conecta tus herramientas existentes para crear un ecosistema digital cohesivo y eficiente.",
-        },
-      ]}
-    />
+    <Services servicios={todosLosServicios.slice(30, 36)} />
 
     <Chooseus />
     <Contact />
