@@ -6,7 +6,7 @@ import Title from "../components/Title.astro";
 import Hero from "../components/Hero.astro";
 import Contact from "../components/Contact.astro";
 import Chooseus from "../components/Chooseus.astro";
-import Services from "../components/Services.astro";
+import Services, { todosLosServicios } from "../components/Services.astro";
 ---
 
 <Layout title="Diseño Web">
@@ -20,39 +20,7 @@ import Services from "../components/Services.astro";
       descripcion="Creamos sitios que se adaptan a cualquier dispositivo, autoadministrables, seguros y listos para posicionarse en buscadores."
     />
 
-    <Services
-      servicios={[
-        {
-          titulo: "Diseño responsivo",
-          descripcion:
-            "Interfaces que se adaptan fluidamente a móviles, tablet y escritorio.",
-        },
-        {
-          titulo: "Autoadministrable",
-          descripcion:
-            "Capacitación para gestionar contenidos y realizar cambios fácilmente.",
-        },
-        {
-          titulo: "Posicionamiento",
-          descripcion:
-            "Arquitectura y contenido preparados para SEO y rendimiento.",
-        },
-        {
-          titulo: "Redes sociales",
-          descripcion:
-            "Integración con tus redes para aumentar alcance y conversión.",
-        },
-        {
-          titulo: "Sitio seguro",
-          descripcion:
-            "Certificados y prácticas de seguridad para navegación confiable.",
-        },
-        {
-          titulo: "Correos corporativos",
-          descripcion: "Correo empresarial personalizado para tu dominio.",
-        },
-      ]}
-    />
+    <Services servicios={todosLosServicios.slice(0, 6)} />
 
     <Chooseus />
 

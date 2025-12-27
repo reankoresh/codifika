@@ -1,8 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 import Title from "../components/Title.astro";
+import Contact from "../components/Contact.astro";
+import Services, { todosLosServicios } from "../components/Services.astro";
 ---
 
 <Layout title="Redes Sociales">
@@ -11,103 +14,13 @@ import Title from "../components/Title.astro";
       <Navbar />
     </div>
 
-    <!-- Hero -->
-    <section
-      class="min-h-dvh w-full flex items-center justify-center px-4 py-16"
-    >
-      <div class="w-11/12 max-w-5xl text-center flex flex-col items-center">
-        <Title
-          tag="h1"
-          unstyled={true}
-          class="text-4xl md:text-5xl font-bold text-white mb-3"
-        >
-          Gestión de redes sociales estratégica
-        </Title>
-        <div
-          class="mx-auto w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
-        >
-        </div>
-        <p class="mt-6 text-white/80 max-w-2xl mx-auto">
-          Aumenta tu visibilidad, conecta con tu audiencia y convierte
-          seguidores en clientes con estrategia comprobada.
-        </p>
-      </div>
-    </section>
+    <Hero
+      titulo="Gestión de redes sociales estratégica"
+      descripcion="Aumenta tu visibilidad, conecta con tu audiencia y convierte seguidores en clientes con estrategia comprobada."
+    />
 
     <!-- Objetivos principales -->
-    <section class="w-full flex items-center justify-center px-4 py-16">
-      <div class="w-11/12 max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <Title
-            tag="h3"
-            unstyled={true}
-            class="text-xl font-semibold text-white mb-2"
-            >Crecimiento de audiencia</Title
-          >
-          <p class="text-white/70">
-            Aumenta seguidores y engagement de forma orgánica y sostenible.
-          </p>
-        </div>
-        <div>
-          <Title
-            tag="h3"
-            unstyled={true}
-            class="text-xl font-semibold text-white mb-2"
-            >Posicionamiento de marca</Title
-          >
-          <p class="text-white/70">
-            Consolida tu presencia y posiciónate como referente en tu industria.
-          </p>
-        </div>
-        <div>
-          <Title
-            tag="h3"
-            unstyled={true}
-            class="text-xl font-semibold text-white mb-2"
-            >Conversiones y ventas</Title
-          >
-          <p class="text-white/70">
-            Transforma seguidores en clientes reales con estrategia enfocada en
-            resultados.
-          </p>
-        </div>
-        <div>
-          <Title
-            tag="h3"
-            unstyled={true}
-            class="text-xl font-semibold text-white mb-2"
-            >Creación de contenido</Title
-          >
-          <p class="text-white/70">
-            Contenido atractivo, original y alineado con tu marca.
-          </p>
-        </div>
-        <div>
-          <Title
-            tag="h3"
-            unstyled={true}
-            class="text-xl font-semibold text-white mb-2"
-            >Gestión de comunidad</Title
-          >
-          <p class="text-white/70">
-            Respuesta oportuna y construcción de relaciones sólidas con tu
-            audiencia.
-          </p>
-        </div>
-        <div>
-          <Title
-            tag="h3"
-            unstyled={true}
-            class="text-xl font-semibold text-white mb-2"
-            >Análisis y reportes</Title
-          >
-          <p class="text-white/70">
-            Métricas detalladas y KPIs para medir el impacto real de tus
-            campañas.
-          </p>
-        </div>
-      </div>
-    </section>
+    <Services servicios={todosLosServicios.slice(18, 24)} />
 
     <!-- Plataformas especializadas -->
     <section class="w-full flex items-center justify-center px-4 py-16">
@@ -414,42 +327,7 @@ import Title from "../components/Title.astro";
     </section>
 
     <!-- Contacto -->
-    <section class="w-full flex items-center justify-center px-4 py-16">
-      <div class="w-11/12 max-w-4xl text-center flex flex-col items-center">
-        <Title
-          tag="h2"
-          unstyled={true}
-          class="text-3xl md:text-4xl font-bold text-white mb-3"
-          >Contáctanos</Title
-        >
-        <div
-          class="mx-auto w-32 h-px bg-gradient-to-r from-white/0 via-white/50 to-white/0"
-        >
-        </div>
-        <p class="mt-6 text-white/80 max-w-2xl mx-auto">
-          Nuestro equipo está listo para llevar tu presencia digital al
-          siguiente nivel.
-        </p>
-        <div
-          class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 text-white/80"
-        >
-          <a href="tel:+528131247103" class="hover:text-white transition-colors"
-            >Teléfono: +52 (81) 3124 7103</a
-          >
-          <div class="hidden md:block w-px h-6 bg-white/20"></div>
-          <a
-            href="mailto:contacto@pixelero.com.mx"
-            class="hover:text-white transition-colors"
-            >Correo: contacto@pixelero.com.mx</a
-          >
-          <div class="hidden md:block w-px h-6 bg-white/20"></div>
-          <a
-            href="https://maps.app.goo.gl/6kUdwEajxXiRkHff6"
-            class="hover:text-white transition-colors">Monterrey, NL</a
-          >
-        </div>
-      </div>
-    </section>
+    <Contact />
 
     <Footer />
   </div>

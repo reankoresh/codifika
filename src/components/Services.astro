@@ -29,7 +29,130 @@ interface Servicio {
   descripcion: string;
 }
 
-const { servicios = [] } = Astro.props as { servicios?: Servicio[] };
+// Lista consolidada de todos los servicios de todas las páginas
+export const todosLosServicios: Servicio[] = [
+  // web.astro
+  {
+    titulo: "Diseño responsivo",
+    descripcion:
+      "Interfaces que se adaptan fluidamente a móviles, tablet y escritorio.",
+  },
+  {
+    titulo: "Autoadministrable",
+    descripcion:
+      "Capacitación para gestionar contenidos y realizar cambios fácilmente.",
+  },
+  {
+    titulo: "Posicionamiento",
+    descripcion: "Arquitectura y contenido preparados para SEO y rendimiento.",
+  },
+  {
+    titulo: "Redes sociales",
+    descripcion:
+      "Integración con tus redes para aumentar alcance y conversión.",
+  },
+  {
+    titulo: "Sitio seguro",
+    descripcion:
+      "Certificados y prácticas de seguridad para navegación confiable.",
+  },
+  {
+    titulo: "Correos corporativos",
+    descripcion: "Correo empresarial personalizado para tu dominio.",
+  },
+  // video.astro
+  {
+    titulo: "Producción de video",
+    descripcion: "Grabación y dirección de video profesional para tu empresa.",
+  },
+  {
+    titulo: "Postproducción",
+    descripcion: "Edición, color grading y efectos especiales de calidad cine.",
+  },
+  {
+    titulo: "Animación 2D y 3D",
+    descripcion:
+      "Animaciones y gráficos dinámicos para explicar tus servicios.",
+  },
+  {
+    titulo: "Fotografía comercial",
+    descripcion: "Sesiones fotográficas profesionales de productos y eventos.",
+  },
+  {
+    titulo: "Videografía con drones",
+    descripcion:
+      "Tomas aéreas y perspectivas únicas para mayor impacto visual.",
+  },
+  {
+    titulo: "Voz en off y música",
+    descripcion: "Locución profesional y selección de audio para tus videos.",
+  },
+  // systems.astro
+  {
+    titulo: "Aplicaciones web",
+    descripcion:
+      "Plataformas digitales robustas y escalables para gestionar tu negocio desde cualquier dispositivo.",
+  },
+  {
+    titulo: "Sistemas de comunicación",
+    descripcion:
+      "Herramientas internas para optimizar la colaboración y comunicación entre equipos.",
+  },
+  {
+    titulo: "Aplicaciones móviles",
+    descripcion:
+      "Soluciones nativas e híbridas para iOS y Android que llevan tus servicios al bolsillo de tus clientes.",
+  },
+  {
+    titulo: "Portales de servicios",
+    descripcion:
+      "Plataformas en la nube para ofrecer servicios digitales a tus clientes con máxima seguridad.",
+  },
+  {
+    titulo: "Sistemas de gestión",
+    descripcion:
+      "Herramientas administrativas personalizadas para controlar inventarios, ventas y operaciones.",
+  },
+  {
+    titulo: "Integración de sistemas",
+    descripcion:
+      "Conecta tus herramientas existentes para crear un ecosistema digital cohesivo y eficiente.",
+  },
+  // social.astro
+  {
+    titulo: "Crecimiento de audiencia",
+    descripcion:
+      "Aumenta seguidores y engagement de forma orgánica y sostenible.",
+  },
+  {
+    titulo: "Posicionamiento de marca",
+    descripcion:
+      "Consolida tu presencia y posicióname como referente en tu industria.",
+  },
+  {
+    titulo: "Conversiones y ventas",
+    descripcion:
+      "Transforma seguidores en clientes reales con estrategia enfocada en resultados.",
+  },
+  {
+    titulo: "Creación de contenido",
+    descripcion: "Contenido atractivo, original y alineado con tu marca.",
+  },
+  {
+    titulo: "Gestión de comunidad",
+    descripcion:
+      "Respuesta oportuna y construcción de relaciones sólidas con tu audiencia.",
+  },
+  {
+    titulo: "Análisis y reportes",
+    descripcion:
+      "Métricas detalladas y KPIs para medir el impacto real de tus campañas.",
+  },
+];
+
+const { servicios = todosLosServicios } = Astro.props as {
+  servicios?: Servicio[];
+};
 ---
 
 <section class="w-full flex items-center justify-center px-4 py-16">
@@ -39,6 +162,83 @@ const { servicios = [] } = Astro.props as { servicios?: Servicio[] };
         // Asignar icono según el título del servicio
         let icon = undefined;
         switch (servicio.titulo) {
+          // web.astro
+          case "Diseño responsivo":
+            icon = Palette;
+            break;
+          case "Autoadministrable":
+            icon = Briefcase;
+            break;
+          case "Posicionamiento":
+            icon = BarChart2;
+            break;
+          case "Redes sociales":
+            icon = Users;
+            break;
+          case "Sitio seguro":
+            icon = ShieldCheck;
+            break;
+          case "Correos corporativos":
+            icon = MessageCircle;
+            break;
+          // video.astro
+          case "Producción de video":
+            icon = Video;
+            break;
+          case "Postproducción":
+            icon = Package;
+            break;
+          case "Animación 2D y 3D":
+            icon = Sparkles;
+            break;
+          case "Fotografía comercial":
+            icon = Camera;
+            break;
+          case "Videografía con drones":
+            icon = Video;
+            break;
+          case "Voz en off y música":
+            icon = Mic;
+            break;
+          // systems.astro
+          case "Aplicaciones web":
+            icon = BookOpen;
+            break;
+          case "Sistemas de comunicación":
+            icon = MessageCircle;
+            break;
+          case "Aplicaciones móviles":
+            icon = Package;
+            break;
+          case "Portales de servicios":
+            icon = Building2;
+            break;
+          case "Sistemas de gestión":
+            icon = FileText;
+            break;
+          case "Integración de sistemas":
+            icon = PieChart;
+            break;
+          // social.astro
+          case "Crecimiento de audiencia":
+            icon = UserPlus;
+            break;
+          case "Posicionamiento de marca":
+            icon = BarChart2;
+            break;
+          case "Conversiones y ventas":
+            icon = PieChart;
+            break;
+          case "Creación de contenido":
+            icon = FileText;
+            break;
+          case "Gestión de comunidad":
+            icon = MessageCircle;
+            break;
+          case "Análisis y reportes":
+            icon = BarChart2;
+            break;
+          // legacy y otros
           case "Identidad corporativa":
             icon = Palette;
             break;
@@ -60,9 +260,6 @@ const { servicios = [] } = Astro.props as { servicios?: Servicio[] };
           case "Fotografía aérea":
             icon = Camera;
             break;
-          case "Videografía con drones":
-            icon = Video;
-            break;
           case "Avance de obra":
             icon = Building2;
             break;
@@ -74,24 +271,6 @@ const { servicios = [] } = Astro.props as { servicios?: Servicio[] };
             break;
           case "Comerciales publicitarios":
             icon = Megaphone;
-            break;
-          case "Crecimiento de audiencia":
-            icon = UserPlus;
-            break;
-          case "Posicionamiento de marca":
-            icon = BarChart2;
-            break;
-          case "Conversiones y ventas":
-            icon = PieChart;
-            break;
-          case "Creación de contenido":
-            icon = FileText;
-            break;
-          case "Gestión de comunidad":
-            icon = MessageCircle;
-            break;
-          case "Análisis y reportes":
-            icon = BarChart2;
             break;
           default:
             icon = Sparkles;

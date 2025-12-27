@@ -6,7 +6,7 @@ import Title from "../components/Title.astro";
 import Hero from "../components/Hero.astro";
 import Contact from "../components/Contact.astro";
 import Card from "../components/Card.astro";
-import Services from "../components/Services.astro";
+import Services, { todosLosServicios } from "../components/Services.astro";
 ---
 
 <Layout title="Diseño Gráfico">
@@ -20,38 +20,7 @@ import Services from "../components/Services.astro";
       descripcion="Creamos soluciones visuales estratégicas que reflejan la identidad de tu empresa y conectan con tu audiencia."
     />
 
-    <Services
-      servicios={[
-        {
-          titulo: "Identidad corporativa",
-          descripcion:
-            "Diseño de logo, paleta de colores y guidelines para tu marca.",
-        },
-        {
-          titulo: "Material corporativo",
-          descripcion:
-            "Tarjetas, papelería, hojas membretadas y firma electrónica.",
-        },
-        {
-          titulo: "Branding",
-          descripcion: "Estrategia visual completa para posicionar tu marca.",
-        },
-        {
-          titulo: "Brochures y catálogos",
-          descripcion:
-            "Diseño de materiales impresos para promoción de productos.",
-        },
-        {
-          titulo: "Publicidad y banners",
-          descripcion: "Materiales visuales para campañas web e impresas.",
-        },
-        {
-          titulo: "Packaging",
-          descripcion:
-            "Diseño de empaques y etiquetas que destaquen tu producto.",
-        },
-      ]}
-    />
+    <Services servicios={todosLosServicios.slice(6, 12)} />
 
     <!-- Por qué elegirnos -->
     <section class="w-full flex items-center justify-center px-4 py-16">

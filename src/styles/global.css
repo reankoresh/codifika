@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-/* Fellix weights (Regular & Italic). Añade solo los que existan en public/fonts. */
-
 /* 100 Thin */
 @font-face {
   font-family: "Fellix";
@@ -98,7 +96,6 @@ body {
 /* Estilos globales para <p> en Tailwind v4 (sin @apply) */
 p {
   margin: 0; /* m-0 */
-  color: #44403a; /* text-[rgb(35,35,35)] */
   -webkit-font-smoothing: antialiased; /* antialiased */
   -moz-osx-font-smoothing: grayscale; /* antialiased */
   hyphens: none; /* hyphens-none */
