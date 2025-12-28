@@ -21,7 +21,9 @@ import { Globe } from "lucide-astro";
     class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 [perspective:1200px]"
   >
     <!-- Columna Izquierda -->
-    <div class="md:col-span-3 flex flex-col gap-6">
+    <div
+      class="md:col-span-6 lg:col-span-3 flex flex-col gap-6 md:order-3 lg:order-1"
+    >
       <div
         class="bg-white/[0.03] hover:bg-[rgba(255,230,226,0.5)] backdrop-blur-xl p-8 rounded-[2rem] flex items-center h-80 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all hover:scale-[1.03] hover:shadow-pink-500/30"
       >
@@ -86,7 +88,9 @@ import { Globe } from "lucide-astro";
     </div>
 
     <!-- Columna Central -->
-    <div class="md:col-span-6 flex flex-col gap-6">
+    <div
+      class="md:col-span-12 lg:col-span-6 flex flex-col gap-6 order-first md:order-1 lg:order-2"
+    >
       <div
         class="bg-gradient-to-b from-white/[0.08] to-transparent rounded-[3rem] p-[1px] h-full shadow-2xl"
       >
@@ -153,7 +157,9 @@ import { Globe } from "lucide-astro";
     </div>
 
     <!-- Columna Derecha -->
-    <div class="md:col-span-3 flex flex-col gap-6">
+    <div
+      class="md:col-span-6 lg:col-span-3 flex flex-col gap-6 md:order-2 lg:order-3"
+    >
       <button
         class="relative group bg-gradient-to-br from-indigo-600 to-purple-700 p-6 rounded-[2rem] overflow-hidden shadow-[0_15px_30px_-5px_rgba(79,70,229,0.5)] transition-all hover:scale-[1.03] hover:shadow-indigo-500/30"
       >
