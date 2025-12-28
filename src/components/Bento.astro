@@ -5,7 +5,7 @@ import { Globe } from "lucide-astro";
 ---
 
 <section
-  class="min-h-screen bg-[#0a0a0c50] text-white p-4 md:p-8 font-sans relative z-10"
+  class="min-h-screen bg-transparent text-white p-4 md:p-8 font-sans relative z-10"
 >
   <!-- Fondos decorativos -->
   <div
@@ -23,52 +23,65 @@ import { Globe } from "lucide-astro";
     <!-- Columna Izquierda -->
     <div class="md:col-span-3 flex flex-col gap-6">
       <div
-        class="bg-white/[0.03] hover:bg-[rgba(255,249,223,0.5)] backdrop-blur-xl p-8 rounded-[2rem] flex flex-col justify-between h-80 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+        class="bg-white/[0.03] hover:bg-[rgba(255,230,226,0.5)] backdrop-blur-xl p-8 rounded-[2rem] flex items-center h-80 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all hover:scale-[1.03] hover:shadow-pink-500/30"
       >
-        <div>
-          <div class="mb-4 transition-colors text-whitec">
-            <Globe class="w-10 h-10" style="color:inherit" />
-          </div>
+        <div class="flex flex-col justify-center items-center">
           <Title tag="h4" color="white"
-            >Software que Vende, Impacta y Escala</Title
+            >Software que Vende, Impacta y Escala.</Title
           >
         </div>
       </div>
 
       <div
-        class="bg-white/[0.02] backdrop-blur-md p-6 rounded-[2rem] border border-white/5 shadow-xl hover:bg-white/[0.05] transition-all"
+        class="bg-white/[0.02] hover:bg-[rgba(255,249,223,0.5)] backdrop-blur-md p-6 rounded-[2rem] border border-white/5 shadow-xl transition-all flex flex-col items-center gap-6 transition-all hover:scale-[1.03] hover:shadow-yellow-500/30"
       >
-        <Title tag="h5" color="white">Innovación local, alcance global.</Title>
-        <div class="flex -space-x-2 mt-2">
-          <img
-            class="w-10 h-10 rounded-full border-2 border-[#0a0a0c] ring-1 ring-white/10"
-            src="https://i.pravatar.cc/100?u=1"
-            alt="User"
-          />
-          <img
-            class="w-10 h-10 rounded-full border-2 border-[#0a0a0c] ring-1 ring-white/10"
-            src="https://i.pravatar.cc/100?u=2"
-            alt="User"
-          />
-          <img
-            class="w-10 h-10 rounded-full border-2 border-[#0a0a0c] ring-1 ring-white/10"
-            src="https://i.pravatar.cc/100?u=3"
-            alt="User"
-          />
+        <Title tag="h4" color="white" class="mx-auto text-center"
+          >Innovación local, alcance global.</Title
+        >
+        <div class="grid grid-cols-2 w-7/12 gap-4 mx-auto justify-center">
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-2"
+            >
+              <span class="text-white font-bold">1</span>
+            </div>
+            <span class="block text-xs text-white/80">CRM</span>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-2"
+            >
+              <span class="text-white font-bold">2</span>
+            </div>
+            <span class="block text-xs text-white/80">UX</span>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-2"
+            >
+              <span class="text-white font-bold">3</span>
+            </div>
+            <span class="block text-xs text-white/80">Autor</span>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-[#5623D8] to-[#7B53E2] rounded-full flex items-center justify-center mx-auto mb-2"
+            >
+              <span class="text-white font-bold">4</span>
+            </div>
+            <span class="block text-xs text-white/80">Datos</span>
+          </div>
         </div>
       </div>
 
       <button
-        class="relative group bg-gradient-to-br from-indigo-600 to-purple-700 p-6 rounded-[2rem] overflow-hidden shadow-[0_15px_30px_-5px_rgba(79,70,229,0.5)] transition-all hover:scale-[1.03] hover:shadow-indigo-500/40"
+        class="relative group bg-gradient-to-br from-indigo-600 to-purple-700 p-6 rounded-[2rem] overflow-hidden shadow-[0_15px_30px_-5px_rgba(79,70,229,0.5)] transition-all hover:scale-[1.03] hover:shadow-indigo-500/30"
       >
         <div
           class="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
         >
         </div>
-        <span
-          class="relative z-10 flex items-center justify-center gap-3 font-bold text-lg"
-          >🚀 Inicia y domina tu mercado</span
-        >
+        <Title tag="h5" color="white">¡Haz que tu negocio destaque hoy!</Title>
       </button>
     </div>
 
@@ -123,17 +136,13 @@ import { Globe } from "lucide-astro";
             <div
               class="p-8 border-r border-white/10 text-left hover:bg-white/[0.02] transition-colors"
             >
-              <Title tag="h4" color="indigo" class="font-bold"
-                >Velocidad extrema</Title
-              >
+              <Title tag="h5" color="white">Velocidad extrema</Title>
               <p class="text-xs text-gray-500 mt-1">
                 +90 en Lighthouse, carga instantánea.
               </p>
             </div>
             <div class="p-8 text-left hover:bg-white/[0.02] transition-colors">
-              <Title tag="h4" color="purple" class="font-bold"
-                >Escalabilidad sin límites</Title
-              >
+              <Title tag="h5" color="white">Escalabilidad sin límites</Title>
               <p class="text-xs text-gray-500 mt-1">
                 Nube, microservicios y evolución continua.
               </p>
@@ -145,48 +154,28 @@ import { Globe } from "lucide-astro";
 
     <!-- Columna Derecha -->
     <div class="md:col-span-3 flex flex-col gap-6">
-      <div
-        class="bg-white/[0.03] p-6 rounded-[2.5rem] border border-white/10 flex justify-between items-center shadow-inner"
+      <button
+        class="relative group bg-gradient-to-br from-indigo-600 to-purple-700 p-6 rounded-[2rem] overflow-hidden shadow-[0_15px_30px_-5px_rgba(79,70,229,0.5)] transition-all hover:scale-[1.03] hover:shadow-indigo-500/30"
       >
-        <Title
-          tag="h5"
-          color="gray"
-          class="text-xs font-bold uppercase tracking-widest text-gray-400"
-          >Motor de IA Propio</Title
-        >
         <div
-          class="w-12 h-6 bg-[#0a0a0c] rounded-full relative border border-white/10"
+          class="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
         >
-          <div
-            class="absolute right-1 top-1 w-4 h-4 bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-full shadow-[0_0_10px_rgba(99,102,241,1)]"
-          >
-          </div>
         </div>
-      </div>
+        <Title tag="h5" color="white">Inicia y domina tu mercado</Title>
+      </button>
 
       <div
-        class="bg-white/[0.03] backdrop-blur-md p-8 rounded-[2rem] border border-white/10 flex flex-col items-center justify-center h-52 shadow-2xl group hover:-translate-y-2 transition-all duration-300"
+        class="bg-white/[0.03] hover:bg-[rgba(227,248,251,0.5)] backdrop-blur-md p-8 rounded-[2rem] border border-white/10 flex flex-col items-center justify-center h-52 shadow-2xl transition-all hover:scale-[1.03] hover:shadow-sky-500/30"
       >
-        <Title
-          tag="h5"
-          color="white"
-          class="text-5xl font-black text-white group-hover:scale-110 transition-transform duration-500"
-          >99/100</Title
-        >
-        <Title unstyled={true} class="mt-2 text-[1.8rem] leading-7 font-medium"
-          >Cambiamos el mundo un línea de código a la vez</Title
+        <Title tag="h4" color="white"
+          >Cambiamos el mundo un línea de código a la vez.</Title
         >
       </div>
 
       <div
-        class="bg-white/[0.02] p-8 rounded-[3rem] border border-white/5 flex-grow relative overflow-hidden group"
+        class="bg-white/[0.02] backdrop-blur-md hover:bg-[rgba(245,230,253,0.5)] p-8 rounded-[3rem] border border-white/5 flex-grow relative overflow-hidden shadow-2xl transition-all hover:scale-[1.03] hover:shadow-purple-500/30"
       >
-        <Title
-          tag="h5"
-          color="gray"
-          class="font-bold mb-6 text-sm uppercase tracking-widest"
-          >Especialidades</Title
-        >
+        <Title tag="h4" color="white" class="mb-5">Especialidades.</Title>
         <div class="flex flex-wrap gap-2 relative z-10">
           {
             [
