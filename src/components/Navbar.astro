@@ -115,7 +115,6 @@ import { navLinks } from "./Links.astro";
   document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById("menuToggle");
     const mobileMenu = document.getElementById("mobileMenu");
-    const closeMenu = document.getElementById("closeMenu");
     if (menuToggle && mobileMenu) {
       menuToggle.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
@@ -124,7 +123,13 @@ import { navLinks } from "./Links.astro";
     }
     // Cerrar menú con el botón X
     document.addEventListener("click", (e) => {
-      if (e.target.closest("#closeMenu")) {
+      const target = e.target as HTMLElement;
+      if (
+        target &&
+        target.closest &&
+        target.closest("#closeMenu") &&
+        mobileMenu
+      ) {
         mobileMenu.classList.add("hidden");
         mobileMenu.classList.remove("flex");
       }
