@@ -3,10 +3,20 @@
 // Componente reutilizable para mostrar un servicio en formato card
 import Title from "./Title.astro";
 const { titulo, descripcion, icon: Icon } = Astro.props;
+const cardColors = [
+  "#ffe6e2", // rosa pastel
+  "#e3f8fb", // azul pastel
+  "#fff9df", // amarillo pastel
+  "#f5e6fd", // lila pastel
+  "#e6fbe7", // verde pastel
+  "#fdf0e6", // durazno pastel
+];
+const cardBg = cardColors[Math.floor(Math.random() * cardColors.length)];
 ---
 
 <div
-  class="bg-[#D8FF8E] text-black rounded-2xl p-8 shadow-lg flex flex-col items-center text-center gap-3 hover:scale-105 transition-transform duration-300 hover:bg-[#fff98f]"
+  style={`background-color: ${cardBg};`}
+  class="text-black rounded-2xl p-8 shadow-lg flex flex-col items-center text-center gap-3 hover:scale-105 transition-transform duration-300"
 >
   {
     Icon && (

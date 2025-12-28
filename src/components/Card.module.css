@@ -1,0 +1,6 @@
+.card-bg-hover {
+  transition: background-color 0.3s, transform 0.3s;
+}
+.card-bg-hover:hover {
+  background-color: var(--card-bg-hover);
+}
