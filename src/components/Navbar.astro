@@ -90,49 +90,50 @@ import { navLinks } from "./Links.astro";
             d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
-      {
-        navLinks.map((link) => (
-          <a class="hover:text-[#fff98f]" href={link.href}>
-            {link.name}
-          </a>
-        ))
-      }
-      <button
-        class="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition"
-      >
-        Contacto
-      </button>
-      <button
-        class="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300"
-      >
-        Iniciar Sesión
-      </button>
+      <div class="grid grid-cols-3 gap-6 w-11/12 max-w-md my-10">
+        {
+          navLinks.map((link) => (
+            <a
+              href={link.href}
+              class="flex items-center justify-center aspect-square rounded-xl bg-white/[0.4] backdrop-blur-md text-white text-base font-medium shadow"
+              style="min-width:90px; min-height:90px;"
+            >
+              {link.name
+                .replace("Diseño ", "")
+                .replace("Video & ", "")
+                .replace("Redes ", "")
+                .replace("Renta de ", "")
+                .replace("Sistemas a la Medida", "Software")}
+            </a>
+          ))
+        }
+      </div>
     </div>
   </nav>
-</Layout>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.getElementById("menuToggle");
-    const mobileMenu = document.getElementById("mobileMenu");
-    if (menuToggle && mobileMenu) {
-      menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-        mobileMenu.classList.toggle("flex");
-      });
-    }
-    // Cerrar menú con el botón X
-    document.addEventListener("click", (e) => {
-      const target = e.target as HTMLElement;
-      if (
-        target &&
-        target.closest &&
-        target.closest("#closeMenu") &&
-        mobileMenu
-      ) {
-        mobileMenu.classList.add("hidden");
-        mobileMenu.classList.remove("flex");
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+          mobileMenu.classList.toggle("flex");
+        });
       }
+      // Cerrar menú con el botón X
+      document.addEventListener("click", (e) => {
+        const target = e.target as HTMLElement;
+        if (
+          target &&
+          target.closest &&
+          target.closest("#closeMenu") &&
+          mobileMenu
+        ) {
+          mobileMenu.classList.add("hidden");
+          mobileMenu.classList.remove("flex");
+        }
+      });
     });
-  });
-</script>
+  </script>
+</Layout>
