@@ -70,7 +70,7 @@ import { Globe, Palette, Camera, Users, Drone, Code2 } from "lucide-astro";
     </div>
     <div
       id="mobileMenu"
-      class="fixed hidden top-0 left-0 w-full h-dvh flex-col items-center justify-center gap-4 z-50 bg-black/80 text-base"
+      class="fixed hidden top-0 left-0 w-full h-dvh flex-col items-center justify-center gap-4 z-50 bg-black/80 backdrop-blur text-base"
     >
       <button
         id="closeMenu"
@@ -99,7 +99,7 @@ import { Globe, Palette, Camera, Users, Drone, Code2 } from "lucide-astro";
           <input
             type="text"
             placeholder="Buscar"
-            class="w-full pl-12 pr-4 py-3 rounded-full bg-white text-gray-800 text-lg shadow focus:outline-none"
+            class="w-full pl-12 pr-4 py-3 rounded-full bg-white text-gray-800 text-sm shadow focus:outline-none"
           />
           <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
             <svg
@@ -128,8 +128,8 @@ import { Globe, Palette, Camera, Users, Drone, Code2 } from "lucide-astro";
             return (
               <a
                 href={link.href}
-                class="flex flex-col items-center justify-center aspect-square rounded-xl bg-white/[0.2] backdrop-blur-xl text-white text-base font-medium shadow"
-                style="min-width:90px; min-height:90px;"
+                class="border border-white/[0.2] flex flex-col items-center justify-center aspect-square rounded-xl bg-white/[0.1] backdrop-blur-sm text-white text-xs font-medium shadow"
+                style="min-width:50px; min-height:50px;"
               >
                 <Icon class="w-7 h-5 mb-2 text-white" />
                 {link.name}
@@ -139,7 +139,7 @@ import { Globe, Palette, Camera, Users, Drone, Code2 } from "lucide-astro";
         }
       </div>
       <div class="w-full flex justify-center mt-10">
-        <img src="/logo-vertical.svg" alt="Codifika Logo" class="h-25 w-auto" />
+        <img src="/logo-vertical.svg" alt="Codifika Logo" class="h-20 w-auto" />
       </div>
     </div>
   </nav>
