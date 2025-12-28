@@ -5,15 +5,15 @@ import { Globe } from "lucide-astro";
 ---
 
 <section
-  class="min-h-screen bg-[#0a0a0c50] text-white p-4 md:p-8 font-sans relative z-10 overflow-y-auto"
+  class="min-h-screen bg-[#0a0a0c50] text-white p-4 md:p-8 font-sans relative z-10"
 >
   <!-- Fondos decorativos -->
   <div
-    class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[120px] -z-10 animate-pulse"
+    class="absolute top-[-10%] left-0 w-full max-w-screen h-[500px] bg-indigo-600/20 rounded-full blur-[120px] -z-10 animate-pulse"
   >
   </div>
   <div
-    class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-600/15 rounded-full blur-[120px] -z-10"
+    class="absolute bottom-[-10%] right-0 w-full max-w-screen h-[500px] bg-purple-600/15 rounded-full blur-[120px] -z-10"
   >
   </div>
 
@@ -23,19 +23,14 @@ import { Globe } from "lucide-astro";
     <!-- Columna Izquierda -->
     <div class="md:col-span-3 flex flex-col gap-6">
       <div
-        class="bg-white/[0.03] backdrop-blur-xl p-8 rounded-[2rem] flex flex-col justify-between h-80 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 hover:[transform:rotateY(10deg)_translateZ(20px)] group"
+        class="bg-white/[0.03] hover:bg-[rgba(255,249,223,0.5)] backdrop-blur-xl p-8 rounded-[2rem] flex flex-col justify-between h-80 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
       >
         <div>
-          <div
-            class="text-indigo-500 mb-4 drop-shadow-[0_0_10px_rgba(99,102,241,0.5)] group-hover:scale-110 transition-transform"
-          >
-            <Globe class="w-10 h-10" />
+          <div class="mb-4 transition-colors text-whitec">
+            <Globe class="w-10 h-10" style="color:inherit" />
           </div>
-          <Title tag="h3" color="white"
+          <Title tag="h4" color="white"
             >Software que Vende, Impacta y Escala</Title
-          >
-          <Title tag="h5" color="white" class="mt-2"
-            >Cambiemos el mundo un línea de código a la vez</Title
           >
         </div>
       </div>
@@ -178,11 +173,9 @@ import { Globe } from "lucide-astro";
           class="text-5xl font-black text-white group-hover:scale-110 transition-transform duration-500"
           >99/100</Title
         >
-        <p
-          class="text-indigo-400/80 text-center text-[10px] font-bold uppercase tracking-widest mt-3"
+        <Title unstyled={true} class="mt-2 text-[1.8rem] leading-7 font-medium"
+          >Cambiamos el mundo un línea de código a la vez</Title
         >
-          ¡Tu web más rápida que la competencia!
-        </p>
       </div>
 
       <div
